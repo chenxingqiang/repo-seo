@@ -90,7 +90,7 @@ class GitHubClient:
     def check_auth(self) -> bool:
         """
         Check if GitHub CLI is authenticated.
-        
+
         Returns:
             bool: True if authenticated, False otherwise
         """
@@ -109,10 +109,10 @@ class GitHubClient:
     def get_user_repos(self, username: str) -> List[Dict]:
         """
         Get all repositories for a user using GitHub CLI.
-        
+
         Args:
             username: GitHub username
-            
+
         Returns:
             List of repository data dictionaries
         """
@@ -123,7 +123,7 @@ class GitHubClient:
                 text=True,
                 check=True
             )
-            
+
             repos = json.loads(result.stdout)
             self.logger.info(f"Found {len(repos)} repositories")
             return repos
@@ -137,11 +137,11 @@ class GitHubClient:
     def get_repo_content(self, username: str, repo: str) -> Optional[str]:
         """
         Get repository README content using GitHub CLI.
-        
+
         Args:
             username: GitHub username
             repo: Repository name
-            
+
         Returns:
             README content if available, None otherwise
         """
@@ -153,12 +153,12 @@ class GitHubClient:
                 text=True,
                 check=True
             )
-            
+
             if result.stdout:
                 import base64
                 return base64.b64decode(result.stdout.strip()).decode('utf-8')
             return None
-            
+
         except subprocess.CalledProcessError as e:
             self.logger.error(f"Error fetching repository content: {e.stderr}")
             return None
@@ -169,12 +169,12 @@ class GitHubClient:
     def update_repo_description(self, username: str, repo: str, description: str) -> bool:
         """
         Update repository description using GitHub CLI.
-        
+
         Args:
             username: GitHub username
             repo: Repository name
             description: New repository description
-            
+
         Returns:
             bool: True if successful, False otherwise
         """
@@ -196,11 +196,11 @@ class GitHubClient:
     def get_repo_commits(self, username: str, repo: str) -> List[Dict]:
         """
         Get repository commit history using GitHub CLI.
-        
+
         Args:
             username: GitHub username
             repo: Repository name
-            
+
         Returns:
             List of commit data dictionaries
         """
@@ -211,7 +211,7 @@ class GitHubClient:
                 text=True,
                 check=True
             )
-            
+
             commits = json.loads(result.stdout)
             self.logger.info(f"Found {len(commits)} commits")
             return commits
@@ -225,11 +225,11 @@ class GitHubClient:
     def get_repo_tree(self, username: str, repo: str) -> List[Dict]:
         """
         Get repository file tree using GitHub CLI.
-        
+
         Args:
             username: GitHub username
             repo: Repository name
-            
+
         Returns:
             List of file data dictionaries
         """
@@ -241,10 +241,10 @@ class GitHubClient:
                 text=True,
                 check=True
             )
-            
+
             branch_data = json.loads(branch_result.stdout)
             tree_sha = branch_data['commit']['commit']['tree']['sha']
-            
+
             # Then get the tree
             tree_result = subprocess.run(
                 ["gh", "api", f"/repos/{username}/{repo}/git/trees/{tree_sha}?recursive=1"],
@@ -252,7 +252,7 @@ class GitHubClient:
                 text=True,
                 check=True
             )
-            
+
             tree_data = json.loads(tree_result.stdout)
             return tree_data.get('tree', [])
         except subprocess.CalledProcessError as e:
@@ -260,4 +260,31 @@ class GitHubClient:
             return []
         except Exception as e:
             self.logger.error(f"Error: {str(e)}")
-            return [] 
+            return []
+
+    def get_repo_data(self, username: str, repo: str) -> Optional[Dict]:
+        """
+        Get repository data using GitHub CLI.
+
+        Args:
+            username: GitHub username
+            repo: Repository name
+
+        Returns:
+            Repository data dictionary if successful, None otherwise
+        """
+        try:
+            result = subprocess.run(
+                ["gh", "repo", "view", f"{username}/{repo}", "--json", "name,description,url,repositoryTopics,primaryLanguage,isFork"],
+                capture_output=True,
+                text=True,
+                check=True
+            )
+
+            return json.loads(result.stdout)
+        except subprocess.CalledProcessError as e:
+            self.logger.error(f"Error fetching repository data: {e.stderr}")
+            return None
+        except Exception as e:
+            self.logger.error(f"Error: {str(e)}")
+            return None
