@@ -1,105 +1,157 @@
-# GitHub Repository SEO Optimizer
 
-A Python tool for automatically enhancing GitHub repository SEO by analyzing content, generating optimized descriptions, keywords, and documentation.
 
-## Overview
+```markdown
+# GitHub Repository SEO Optimizer 🔍 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/) [![Code Style: Black](https://img.shields.io/badge/Code%20Style-Black-000000.svg)](https://github.com/psf/black)
 
-This tool helps improve the discoverability of your GitHub repositories by:
+AI-powered toolkit to enhance GitHub repository visibility through automated SEO optimization of READMEs, metadata, and content.
 
-1. Analyzing repository content, code languages, and existing documentation
-2. Generating SEO-friendly descriptions and topics
-3. Creating or updating README files with comprehensive information
-4. Tracking and reporting on optimization changes
+![SEO Optimization Workflow](https://via.placeholder.com/800x400.png?text=SEO+Optimization+Process) *Example workflow visualization*
 
-## Features
+## Features ✨
 
-- **Repository Analysis**: Examines repository content, languages, and existing metadata
-- **Description Optimization**: Generates concise, keyword-rich descriptions
-- **Topic Generation**: Creates relevant topics based on repository content and technologies
-- **README Enhancement**: Creates or updates README files with structured, SEO-friendly content
-- **Batch Processing**: Optimize multiple repositories in a single run
-- **Dry Run Mode**: Preview changes without applying them
-- **Detailed Reporting**: Generate reports of all changes made
+- **Multi-LLM Support**: Choose between 8+ AI providers (OpenAI, Anthropic, Gemini, etc.) or local rule-based engine
+- **Automated SEO Analysis**: Comprehensive repository content evaluation
+- **Smart Content Generation**: Optimized READMEs, descriptions, and topics
+- **GitHub Integration**: Direct API interaction for seamless updates
+- **Commit Message Optimization**: AI-generated conventional commit messages
+- **Pre-commit Hooks**: Automatic optimization before commits
+- **Multi-format Output**: Support for Markdown, JSON, and YAML
+- **Custom Rules Engine**: Domain-specific optimization rules
 
-## Installation
+## Installation ⚙️
 
 ```bash
-# Clone the repository
-git clone https://github.com/chenxingqiang/repo-seo.git
+# Install from PyPI
+pip install repo-seo
+
+# Install from GitHub (latest development version)
+pip install git+https://github.com/yourusername/repo-seo.git
+
+# Development setup
+git clone https://github.com/yourusername/repo-seo.git
 cd repo-seo
-
-# Make the script executable
-chmod +x repo_seo.py
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements-dev.txt
 ```
 
-## Requirements
+## Usage 🚀
 
-- Python 3.6+
-- GitHub CLI (`gh`) installed and authenticated
-- Required Python packages:
-  - No external packages required (uses standard library)
-
-## Usage
-
+### Basic Optimization
 ```bash
-# Basic usage (optimize all repositories)
-./repo_seo.py chenxingqiang
-
-# Dry run (show changes without applying them)
-./repo_seo.py chenxingqiang --dry-run
-
-# Skip private repositories
-./repo_seo.py chenxingqiang --skip-private
-
-# Limit the number of repositories to process
-./repo_seo.py chenxingqiang --limit 10
-
-# Save results to a JSON file
-./repo_seo.py chenxingqiang --output results.json
+python -m repo_cli optimize \
+  --repo-url https://github.com/yourusername/your-repo \
+  --provider openai \
+  --update-readme \
+  --auto-commit
 ```
 
-## How It Works
-
-1. **Repository Fetching**: Uses GitHub CLI to fetch repository information
-2. **Content Analysis**: Analyzes repository languages, topics, and README content
-3. **SEO Generation**: Creates optimized descriptions and topics based on analysis
-4. **Content Updates**: Updates repository metadata and README files via GitHub API
-5. **Reporting**: Generates detailed reports of changes made
-
-## Example Output
-
-```
-Fetching repositories for user: chenxingqiang
-Found 85 repositories
-
-Optimizing repository: repo-seo
-Current description:
-A Python tool for automatically enhancing GitHub repository SEO by analyzing content, generating optimized descriptions, keywords, and documentation.
-New description:
-A Python tool for automatically enhancing GitHub repository SEO by analyzing content, generating optimized descriptions, keywords, and documentation.
-Current topics:
-None
-New topics:
-python, repo, seo, github, repository
-
-Updated topics for repo-seo
-README for repo-seo is already substantial. Skipping update.
-
-Summary:
-Total repositories: 85
-Optimized: 78
-Skipped: 7
-Dry run: False
+### Advanced Configuration
+```bash
+# Local rules with custom config
+python -m repo_cli optimize \
+  --repo-url . \
+  --provider local \
+  --config-path seo-rules.yaml \
+  --output-format markdown \
+  --dry-run
 ```
 
-## Contributing
+### Pre-commit Hook
+Add to `.pre-commit-config.yaml`:
+```yaml
+repos:
+  - repo: https://github.com/yourusername/repo-seo
+    rev: v0.1.0
+    hooks:
+      - id: repo-seo
+        args: [--provider, local, --config-path, seo-rules.yaml]
+```
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+## Configuration ⚙️
 
-## License
+### Environment Variables
+```bash
+# .env file template
+OPENAI_API_KEY=sk-your-key-here
+GITHUB_TOKEN=ghp_your-token-here
+ANTHROPIC_API_KEY=your-antropic-key
+LOG_LEVEL=INFO
+```
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+### Configuration File (seo-rules.yaml)
+```yaml
+rules:
+  keywords:
+    - github-seo
+    - repository-optimization
+  structure:
+    required_sections:
+      - Features
+      - Installation
+      - Usage
+  metadata:
+    min_description_length: 120
+    max_topics: 10
+```
 
-## Keywords
+## API Documentation 📚
 
-github, seo, repository, optimization, python, automation, metadata, description, topics, readme
+### CLI Options
+| Option            | Description                                  | Default       |
+|-------------------|----------------------------------------------|---------------|
+| `--repo-url`       | Repository URL or local path                 | Required      |
+| `--provider`       | AI provider (openai, anthropic, local, etc) | 'local'       |
+| `--config-path`    | Path to custom rules config                  | 'seo-rules.yaml' |
+| `--output-format`  | Output format (markdown, json, yaml)         | 'markdown'    |
+| `--update-readme`  | Automatically update README.md              | False         |
+| `--auto-commit`    | Auto-commit changes with optimized message   | False         |
+
+## Contributing 🤝
+
+We welcome contributions! Please follow these steps:
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+**Development Requirements:**
+- Python 3.8+
+- Black code formatting
+- flake8 linting
+- pytest for testing
+
+## License 📄
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support & Community 💬
+
+For help, feature requests, or discussions:
+- [Open a GitHub Issue](https://github.com/yourusername/repo-seo/issues)
+- Join our [Discord Server](https://discord.gg/your-invite-link)
+
+## Roadmap 🗺️
+
+- [ ] GitHub Actions integration
+- [ ] Multi-language support (beyond English)
+- [ ] Automated keyword research
+- [ ] Visual SEO score dashboard
+- [ ] Browser extension companion
+
+---
+
+[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/repo-seo&type=Timeline)](https://star-history.com/#yourusername/repo-seo&Timeline)
+```
+
+This README includes:
+1. Visual hierarchy with clear section headers
+2. Multiple usage scenarios with code examples
+3. Configuration details for different environments
+4. API documentation in table format
+5. Contribution guidelines with development requirements
+6. Support channels and community links
+7. Interactive roadmap and star history
+8. Badges for quick project status overview
+9. Visual placeholder for workflow diagram (replace with actual image)
+10. Clear licensing and compliance information
