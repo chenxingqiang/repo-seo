@@ -1,0 +1,332 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Chen Xingqiang
+# This file is distributed under the same license as the GitHub Repository
+# SEO Optimizer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GitHub Repository SEO Optimizer 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-25 18:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../development/contributing.rst:2
+msgid "Contributing Guide"
+msgstr ""
+
+#: ../../development/contributing.rst:4
+msgid ""
+"Thank you for your interest in contributing to GitHub Repository SEO "
+"Optimizer! This guide will help you get started."
+msgstr ""
+
+#: ../../development/contributing.rst:7
+msgid "Code of Conduct"
+msgstr ""
+
+#: ../../development/contributing.rst:9
+msgid ""
+"Please read and follow our `Code of Conduct "
+"<https://github.com/chenxingqiang/repo-"
+"seo/blob/main/CODE_OF_CONDUCT.md>`_ to ensure a welcoming environment for"
+" all contributors."
+msgstr ""
+
+#: ../../development/contributing.rst:12
+msgid "Getting Started"
+msgstr ""
+
+#: ../../development/contributing.rst:15
+msgid "1. Fork the Repository"
+msgstr ""
+
+#: ../../development/contributing.rst:17
+msgid "Fork the repository on GitHub and clone your fork locally:"
+msgstr ""
+
+#: ../../development/contributing.rst:25
+msgid "2. Set Up Development Environment"
+msgstr ""
+
+#: ../../development/contributing.rst:27
+msgid "Create a virtual environment and install dependencies:"
+msgstr ""
+
+#: ../../development/contributing.rst:37
+msgid "3. Install Pre-commit Hooks"
+msgstr ""
+
+#: ../../development/contributing.rst:44
+msgid "Development Workflow"
+msgstr ""
+
+#: ../../development/contributing.rst:47
+msgid "1. Create a Branch"
+msgstr ""
+
+#: ../../development/contributing.rst:49
+msgid "Create a new branch for your feature or fix:"
+msgstr ""
+
+#: ../../development/contributing.rst:58
+msgid "2. Make Your Changes"
+msgstr ""
+
+#: ../../development/contributing.rst:60
+msgid "Write clean, readable code"
+msgstr ""
+
+#: ../../development/contributing.rst:61
+msgid "Follow the existing code style"
+msgstr ""
+
+#: ../../development/contributing.rst:62
+msgid "Add docstrings to all functions and classes"
+msgstr ""
+
+#: ../../development/contributing.rst:63
+msgid "Update tests as needed"
+msgstr ""
+
+#: ../../development/contributing.rst:66
+msgid "3. Run Tests"
+msgstr ""
+
+#: ../../development/contributing.rst:68
+msgid "Ensure all tests pass:"
+msgstr ""
+
+#: ../../development/contributing.rst:82
+msgid "4. Check Code Quality"
+msgstr ""
+
+#: ../../development/contributing.rst:96
+msgid "5. Commit Your Changes"
+msgstr ""
+
+#: ../../development/contributing.rst:98
+msgid "Use conventional commits format:"
+msgstr ""
+
+#: ../../development/contributing.rst:107
+msgid "6. Push and Create PR"
+msgstr ""
+
+#: ../../development/contributing.rst:113
+msgid "Then create a Pull Request on GitHub."
+msgstr ""
+
+#: ../../development/contributing.rst:116
+msgid "Contribution Guidelines"
+msgstr ""
+
+#: ../../development/contributing.rst:119
+msgid "Code Style"
+msgstr ""
+
+#: ../../development/contributing.rst:121
+msgid "Follow PEP 8"
+msgstr ""
+
+#: ../../development/contributing.rst:122
+msgid "Use type hints where possible"
+msgstr ""
+
+#: ../../development/contributing.rst:123
+msgid "Maximum line length: 88 characters (Black default)"
+msgstr ""
+
+#: ../../development/contributing.rst:124
+msgid "Use descriptive variable names"
+msgstr ""
+
+#: ../../development/contributing.rst:127
+#: ../../development/contributing.rst:221
+msgid "Documentation"
+msgstr ""
+
+#: ../../development/contributing.rst:129
+msgid "Update documentation for new features"
+msgstr ""
+
+#: ../../development/contributing.rst:130
+msgid "Add docstrings following Google style:"
+msgstr ""
+
+#: ../../development/contributing.rst:149
+#: ../../development/contributing.rst:229
+msgid "Testing"
+msgstr ""
+
+#: ../../development/contributing.rst:151
+msgid "Write tests for new features"
+msgstr ""
+
+#: ../../development/contributing.rst:152
+msgid "Maintain or improve code coverage"
+msgstr ""
+
+#: ../../development/contributing.rst:153
+msgid "Use pytest fixtures for common setups"
+msgstr ""
+
+#: ../../development/contributing.rst:154
+msgid "Mock external API calls"
+msgstr ""
+
+#: ../../development/contributing.rst:156
+msgid "Example test:"
+msgstr ""
+
+#: ../../development/contributing.rst:172
+msgid "Pull Request Process"
+msgstr ""
+
+#: ../../development/contributing.rst:174
+msgid "**Title**: Use a clear, descriptive title"
+msgstr ""
+
+#: ../../development/contributing.rst:175
+msgid "**Description**: Explain what changes you made and why"
+msgstr ""
+
+#: ../../development/contributing.rst:176
+msgid "**Testing**: Describe how you tested your changes"
+msgstr ""
+
+#: ../../development/contributing.rst:177
+msgid "**Screenshots**: Include if applicable"
+msgstr ""
+
+#: ../../development/contributing.rst:178
+msgid "**Related Issues**: Link any related issues"
+msgstr ""
+
+#: ../../development/contributing.rst:180
+msgid "PR Template:"
+msgstr ""
+
+#: ../../development/contributing.rst:205
+msgid "Areas for Contribution"
+msgstr ""
+
+#: ../../development/contributing.rst:208
+msgid "Good First Issues"
+msgstr ""
+
+#: ../../development/contributing.rst:210
+msgid "Look for issues labeled ``good first issue`` on GitHub."
+msgstr ""
+
+#: ../../development/contributing.rst:213
+msgid "Feature Requests"
+msgstr ""
+
+#: ../../development/contributing.rst:215
+msgid "New LLM provider integrations"
+msgstr ""
+
+#: ../../development/contributing.rst:216
+msgid "Additional output formats"
+msgstr ""
+
+#: ../../development/contributing.rst:217
+msgid "Performance improvements"
+msgstr ""
+
+#: ../../development/contributing.rst:218
+msgid "UI/UX enhancements"
+msgstr ""
+
+#: ../../development/contributing.rst:223
+msgid "Improve existing documentation"
+msgstr ""
+
+#: ../../development/contributing.rst:224
+msgid "Add more examples"
+msgstr ""
+
+#: ../../development/contributing.rst:225
+msgid "Translate documentation"
+msgstr ""
+
+#: ../../development/contributing.rst:226
+msgid "Create video tutorials"
+msgstr ""
+
+#: ../../development/contributing.rst:231
+msgid "Increase test coverage"
+msgstr ""
+
+#: ../../development/contributing.rst:232
+msgid "Add integration tests"
+msgstr ""
+
+#: ../../development/contributing.rst:233
+msgid "Test edge cases"
+msgstr ""
+
+#: ../../development/contributing.rst:234
+msgid "Performance benchmarks"
+msgstr ""
+
+#: ../../development/contributing.rst:237
+msgid "Release Process"
+msgstr ""
+
+#: ../../development/contributing.rst:239
+msgid "Maintainers follow this process:"
+msgstr ""
+
+#: ../../development/contributing.rst:241
+msgid "Update version in ``setup.py``"
+msgstr ""
+
+#: ../../development/contributing.rst:242
+msgid "Update ``CHANGELOG.rst``"
+msgstr ""
+
+#: ../../development/contributing.rst:243
+msgid "Create release PR"
+msgstr ""
+
+#: ../../development/contributing.rst:244
+msgid "Tag release after merge"
+msgstr ""
+
+#: ../../development/contributing.rst:245
+msgid "Build and publish to PyPI"
+msgstr ""
+
+#: ../../development/contributing.rst:248
+msgid "Questions?"
+msgstr ""
+
+#: ../../development/contributing.rst:250
+msgid ""
+"Open a `Discussion <https://github.com/chenxingqiang/repo-"
+"seo/discussions>`_"
+msgstr ""
+
+#: ../../development/contributing.rst:251
+msgid "Join our community chat"
+msgstr ""
+
+#: ../../development/contributing.rst:252
+msgid "Email the maintainers"
+msgstr ""
+
+#: ../../development/contributing.rst:254
+msgid "Thank you for contributing! 🎉"
+msgstr ""
+

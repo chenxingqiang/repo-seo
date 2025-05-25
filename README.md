@@ -1,6 +1,3 @@
-
-
-```markdown
 # GitHub Repository SEO Optimizer 🔍 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/) [![Code Style: Black](https://img.shields.io/badge/Code%20Style-Black-000000.svg)](https://github.com/psf/black)
 
 AI-powered toolkit to enhance GitHub repository visibility through automated SEO optimization of READMEs, metadata, and content.
@@ -11,7 +8,7 @@ AI-powered toolkit to enhance GitHub repository visibility through automated SEO
 
 - **Multi-LLM Support**: Choose between 8+ AI providers (OpenAI, Anthropic, Gemini, etc.) or local rule-based engine
 - **Automated SEO Analysis**: Comprehensive repository content evaluation
-- **Smart Content Generation**: Optimized READMEs, descriptions, and topics
+- **Smart Content Generation**: Optimized README, descriptions, and topics
 - **GitHub Integration**: Direct API interaction for seamless updates
 - **Commit Message Optimization**: AI-generated conventional commit messages
 - **Pre-commit Hooks**: Automatic optimization before commits
@@ -20,18 +17,26 @@ AI-powered toolkit to enhance GitHub repository visibility through automated SEO
 
 ## Installation ⚙️
 
+### From PyPI (Recommended)
+
 ```bash
-# Install from PyPI
-pip install repo-seo
+pip install repo-seo-optimizer
+```
 
-# Install from GitHub (latest development version)
-pip install git+https://github.com/yourusername/repo-seo.git
+### From Source
 
-# Development setup
-git clone https://github.com/yourusername/repo-seo.git
+```bash
+git clone https://github.com/chenxingqiang/repo-seo.git
 cd repo-seo
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements-dev.txt
+pip install -e .
+```
+
+### Development Installation
+
+```bash
+git clone https://github.com/chenxingqiang/repo-seo.git
+cd repo-seo
+pip install -e ".[dev]"
 ```
 
 ## Usage 🚀

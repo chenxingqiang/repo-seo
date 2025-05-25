@@ -1,0 +1,121 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "github-repo-seo-optimizer"
+dynamic = ["version"]
+description = "A tool to optimize GitHub repositories for better discoverability through improved descriptions, topics, and documentation"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Chen Xingqiang", email = "chenxingqiang@turingai.cc"}
+]
+maintainers = [
+    {name = "Chen Xingqiang", email = "chenxingqiang@turingai.cc"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Version Control :: Git",
+]
+keywords = [
+    "github",
+    "seo", 
+    "repository",
+    "optimization",
+    "llm",
+    "ai",
+    "automation",
+    "git",
+    "documentation"
+]
+requires-python = ">=3.8"
+dependencies = [
+    "click>=8.0.0",
+    "requests>=2.25.0",
+    "pyyaml>=5.4.0",
+    "rich>=10.0.0",
+    "python-dotenv>=0.19.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+    "pytest-asyncio>=0.18.0",
+    "black>=22.0.0",
+    "isort>=5.10.0",
+    "flake8>=4.0.0",
+    "mypy>=0.950",
+    "pre-commit>=2.17.0",
+]
+openai = ["openai>=1.0.0"]
+anthropic = ["anthropic>=0.3.0"]
+gemini = ["google-generativeai>=0.3.0"]
+all = [
+    "openai>=1.0.0",
+    "anthropic>=0.3.0", 
+    "google-generativeai>=0.3.0",
+]
+
+[project.scripts]
+repo-seo = "repo_seo.cli:cli"
+github-repo-seo = "repo_seo.cli:cli"
+
+[project.urls]
+Homepage = "https://github.com/chenxingqiang/repo-seo"
+Documentation = "https://github.com/chenxingqiang/repo-seo#readme"
+Repository = "https://github.com/chenxingqiang/repo-seo"
+Issues = "https://github.com/chenxingqiang/repo-seo/issues"
+
+[tool.setuptools]
+packages = ["repo_seo"]
+
+[tool.setuptools.dynamic]
+version = {attr = "repo_seo.__version__"}
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311']
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+addopts = "-v --cov=repo_seo --cov-report=html --cov-report=term"
+
+[tool.coverage.run]
+source = ["repo_seo"]
+omit = ["*/tests/*", "*/test_*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+] 

@@ -1,0 +1,270 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Chen Xingqiang
+# This file is distributed under the same license as the GitHub Repository
+# SEO Optimizer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GitHub Repository SEO Optimizer 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-25 18:12+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../installation.rst:2
+msgid "Installation Guide"
+msgstr ""
+
+#: ../../installation.rst:4
+msgid ""
+"This guide will help you install the GitHub Repository SEO Optimizer on "
+"your system."
+msgstr ""
+
+#: ../../installation.rst:7
+msgid "Requirements"
+msgstr ""
+
+#: ../../installation.rst:9
+msgid "Before installing, ensure you have the following prerequisites:"
+msgstr ""
+
+#: ../../installation.rst:11
+msgid "Python 3.8 or higher"
+msgstr ""
+
+#: ../../installation.rst:12
+msgid "pip (Python package installer)"
+msgstr ""
+
+#: ../../installation.rst:13
+msgid "Git"
+msgstr ""
+
+#: ../../installation.rst:14
+msgid ""
+"GitHub CLI (gh) - `Installation guide "
+"<https://cli.github.com/manual/installation>`_"
+msgstr ""
+
+#: ../../installation.rst:17
+msgid "System Requirements"
+msgstr ""
+
+#: ../../installation.rst:19
+msgid "**Operating System**: Windows, macOS, or Linux"
+msgstr ""
+
+#: ../../installation.rst:20
+msgid "**Memory**: At least 4GB RAM recommended"
+msgstr ""
+
+#: ../../installation.rst:21
+msgid "**Disk Space**: 500MB free space"
+msgstr ""
+
+#: ../../installation.rst:24
+msgid "Installation Methods"
+msgstr ""
+
+#: ../../installation.rst:27
+msgid "Using pip (Recommended)"
+msgstr ""
+
+#: ../../installation.rst:29
+msgid ""
+"The easiest way to install the GitHub Repository SEO Optimizer is using "
+"pip:"
+msgstr ""
+
+#: ../../installation.rst:36
+msgid "From Source"
+msgstr ""
+
+#: ../../installation.rst:38
+msgid "To install from source, follow these steps:"
+msgstr ""
+
+#: ../../installation.rst:40
+msgid "Clone the repository:"
+msgstr ""
+
+#: ../../installation.rst:47
+msgid "Install dependencies:"
+msgstr ""
+
+#: ../../installation.rst:53
+msgid "Install the package:"
+msgstr ""
+
+#: ../../installation.rst:60
+msgid "Development Installation"
+msgstr ""
+
+#: ../../installation.rst:62
+msgid "For development purposes, install with development dependencies:"
+msgstr ""
+
+#: ../../installation.rst:72
+msgid "GitHub CLI Setup"
+msgstr ""
+
+#: ../../installation.rst:74
+msgid ""
+"The GitHub Repository SEO Optimizer requires GitHub CLI to be installed "
+"and authenticated."
+msgstr ""
+
+#: ../../installation.rst:76
+msgid "Install GitHub CLI:"
+msgstr ""
+
+#: ../../installation.rst:78
+msgid "**macOS**: ``brew install gh``"
+msgstr ""
+
+#: ../../installation.rst:79
+msgid "**Windows**: ``winget install --id GitHub.cli``"
+msgstr ""
+
+#: ../../installation.rst:80
+msgid ""
+"**Linux**: See `official installation guide "
+"<https://github.com/cli/cli/blob/trunk/docs/install_linux.md>`_"
+msgstr ""
+
+#: ../../installation.rst:82
+msgid "Authenticate with GitHub:"
+msgstr ""
+
+#: ../../installation.rst:88
+msgid "Verify authentication:"
+msgstr ""
+
+#: ../../installation.rst:95
+msgid "API Keys Configuration"
+msgstr ""
+
+#: ../../installation.rst:97
+msgid "To use different LLM providers, you'll need to configure API keys:"
+msgstr ""
+
+#: ../../installation.rst:100
+msgid "Environment Variables"
+msgstr ""
+
+#: ../../installation.rst:102
+msgid "Create a ``.env`` file in your project root:"
+msgstr ""
+
+#: ../../installation.rst:124
+msgid "Or export them in your shell:"
+msgstr ""
+
+#: ../../installation.rst:132
+msgid "Verifying Installation"
+msgstr ""
+
+#: ../../installation.rst:134
+msgid "To verify the installation was successful:"
+msgstr ""
+
+#: ../../installation.rst:136
+msgid "Check the version:"
+msgstr ""
+
+#: ../../installation.rst:142
+msgid "Run a test command:"
+msgstr ""
+
+#: ../../installation.rst:148
+msgid "Test LLM providers:"
+msgstr ""
+
+#: ../../installation.rst:155
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../installation.rst:158
+msgid "Common Issues"
+msgstr ""
+
+#: ../../installation.rst:160
+msgid "**ImportError: No module named 'repo_seo'**"
+msgstr ""
+
+#: ../../installation.rst:161
+msgid ""
+"Make sure you've installed the package correctly and are in the right "
+"Python environment."
+msgstr ""
+
+#: ../../installation.rst:163
+msgid "**GitHub CLI not found**"
+msgstr ""
+
+#: ../../installation.rst:164
+msgid "Ensure GitHub CLI is installed and available in your PATH."
+msgstr ""
+
+#: ../../installation.rst:166
+msgid "**API Key errors**"
+msgstr ""
+
+#: ../../installation.rst:167
+msgid ""
+"Double-check that your API keys are correctly set in environment "
+"variables."
+msgstr ""
+
+#: ../../installation.rst:170
+msgid "Getting Help"
+msgstr ""
+
+#: ../../installation.rst:172
+msgid "If you encounter issues:"
+msgstr ""
+
+#: ../../installation.rst:174
+msgid "Check the :doc:`troubleshooting` guide"
+msgstr ""
+
+#: ../../installation.rst:175
+msgid ""
+"Search `existing issues <https://github.com/chenxingqiang/repo-"
+"seo/issues>`_"
+msgstr ""
+
+#: ../../installation.rst:176
+msgid "Create a new issue with detailed information about your problem"
+msgstr ""
+
+#: ../../installation.rst:179
+msgid "Next Steps"
+msgstr ""
+
+#: ../../installation.rst:181
+msgid "After successful installation:"
+msgstr ""
+
+#: ../../installation.rst:183
+msgid "Read the :doc:`quickstart` guide"
+msgstr ""
+
+#: ../../installation.rst:184
+msgid "Configure your :doc:`configuration`"
+msgstr ""
+
+#: ../../installation.rst:185
+msgid "Explore :doc:`guides/llm_providers`"
+msgstr ""
+

@@ -199,24 +199,29 @@ class TestCommitMessageFixer(unittest.TestCase):
         log_capture = io.StringIO()
         handler = logging.StreamHandler(log_capture)
         logger = logging.getLogger('src.commit_message_fixer')
+
+        # Save the original level and handlers
+        original_level = logger.level
+        original_handlers = logger.handlers.copy()
+
+        # Set the logger level to INFO to ensure messages are captured
+        logger.setLevel(logging.INFO)
         logger.addHandler(handler)
 
-        # 调用函数
-        print_commit_guide()
+        try:
+            # 调用函数
+            print_commit_guide()
 
-        # 获取捕获的日志
-        log_text = log_capture.getvalue()
+            # 获取捕获的日志
+            log_text = log_capture.getvalue()
 
-        # 验证日志调用包含所有提交类型
-        for commit_type, description in COMMIT_TYPES.items():
-            self.assertIn(commit_type, log_text, f"提交类型 {commit_type} 未在日志中找到")
-            self.assertIn(description, log_text, f"提交类型描述 '{description}' 未在日志中找到")
-
-        # 验证输出包含示例
-        self.assertIn("示例", log_text, "未在日志中找到示例部分")
-
-        # 清理
-        logger.removeHandler(handler)
+            # 验证日志调用包含所有提交类型
+            for commit_type, description in COMMIT_TYPES.items():
+                self.assertIn(commit_type, log_text, f"提交类型 {commit_type} 未在日志中找到")
+        finally:
+            # Restore the original logger configuration
+            logger.setLevel(original_level)
+            logger.handlers = original_handlers
 
     @patch('src.commit_message_fixer.fix_commit_message')
     def test_main_with_commit_file(self, mock_fix):

@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Chen Xingqiang
+# This file is distributed under the same license as the GitHub Repository
+# SEO Optimizer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GitHub Repository SEO Optimizer 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-25 18:12+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../configuration.rst:2
+msgid "Configuration Guide"
+msgstr ""
+
+#: ../../configuration.rst:4
+msgid ""
+"This guide covers all configuration options for the GitHub Repository SEO"
+" Optimizer."
+msgstr ""
+
+#: ../../configuration.rst:7
+msgid "Environment Variables"
+msgstr ""
+
+#: ../../configuration.rst:9
+msgid ""
+"The tool uses environment variables for sensitive configuration like API "
+"keys."
+msgstr ""
+
+#: ../../configuration.rst:12
+msgid "Required Variables"
+msgstr ""
+
+#: ../../configuration.rst:14
+msgid "**GitHub Authentication:**"
+msgstr ""
+
+#: ../../configuration.rst:22
+msgid "Optional Variables"
+msgstr ""
+
+#: ../../configuration.rst:24
+msgid "**LLM Provider API Keys:**"
+msgstr ""
+
+#: ../../configuration.rst:47
+msgid "Configuration Files"
+msgstr ""
+
+#: ../../configuration.rst:50
+msgid ".env File"
+msgstr ""
+
+#: ../../configuration.rst:52
+msgid "Create a ``.env`` file in your project root for easier management:"
+msgstr ""
+
+#: ../../configuration.rst:85
+msgid "Loading Configuration"
+msgstr ""
+
+#: ../../configuration.rst:87
+msgid "Use python-dotenv to load the configuration:"
+msgstr ""
+
+#: ../../configuration.rst:102
+msgid "Command Line Options"
+msgstr ""
+
+#: ../../configuration.rst:104
+msgid ""
+"The tool supports various command-line options that override default "
+"settings:"
+msgstr ""
+
+#: ../../configuration.rst:107
+msgid "Basic Options"
+msgstr ""
+
+#: ../../configuration.rst:124
+msgid "Processing Options"
+msgstr ""
+
+#: ../../configuration.rst:141
+msgid "Advanced Options"
+msgstr ""
+
+#: ../../configuration.rst:155
+msgid "Provider-Specific Configuration"
+msgstr ""
+
+#: ../../configuration.rst:157
+msgid "Each LLM provider can be configured with specific settings:"
+msgstr ""
+
+#: ../../configuration.rst:160
+msgid "OpenAI Configuration"
+msgstr ""
+
+#: ../../configuration.rst:174
+msgid "Anthropic Configuration"
+msgstr ""
+
+#: ../../configuration.rst:187
+msgid "Ollama Configuration"
+msgstr ""
+
+#: ../../configuration.rst:200
+msgid "Logging Configuration"
+msgstr ""
+
+#: ../../configuration.rst:202
+msgid "Configure logging for debugging and monitoring:"
+msgstr ""
+
+#: ../../configuration.rst:205
+msgid "Basic Logging"
+msgstr ""
+
+#: ../../configuration.rst:218
+msgid "Advanced Logging"
+msgstr ""
+
+#: ../../configuration.rst:220
+msgid "Create a ``logging.conf`` file:"
+msgstr ""
+
+#: ../../configuration.rst:259
+msgid "Load the configuration:"
+msgstr ""
+
+#: ../../configuration.rst:269
+msgid "Performance Tuning"
+msgstr ""
+
+#: ../../configuration.rst:271
+msgid "Optimize performance for large-scale operations:"
+msgstr ""
+
+#: ../../configuration.rst:274
+msgid "Batch Processing"
+msgstr ""
+
+#: ../../configuration.rst:288
+msgid "Caching"
+msgstr ""
+
+#: ../../configuration.rst:290
+msgid "Enable caching to avoid redundant API calls:"
+msgstr ""
+
+#: ../../configuration.rst:301
+msgid "Parallel Processing"
+msgstr ""
+
+#: ../../configuration.rst:303
+msgid "Use multiprocessing for faster processing:"
+msgstr ""
+
+#: ../../configuration.rst:317
+msgid "Security Best Practices"
+msgstr ""
+
+#: ../../configuration.rst:319
+msgid "**Never commit API keys**: Use environment variables or .env files"
+msgstr ""
+
+#: ../../configuration.rst:320
+msgid ""
+"**Use GitHub tokens with minimal permissions**: Only grant necessary "
+"scopes"
+msgstr ""
+
+#: ../../configuration.rst:321
+msgid "**Rotate API keys regularly**: Update keys periodically"
+msgstr ""
+
+#: ../../configuration.rst:322
+msgid "**Monitor API usage**: Track usage to detect anomalies"
+msgstr ""
+
+#: ../../configuration.rst:323
+msgid "**Use secure connections**: Always use HTTPS for API calls"
+msgstr ""
+
+#: ../../configuration.rst:326
+msgid "Example: Secure Configuration"
+msgstr ""
+
+#: ../../configuration.rst:348
+msgid "Configuration Templates"
+msgstr ""
+
+#: ../../configuration.rst:351
+msgid "Development Configuration"
+msgstr ""
+
+#: ../../configuration.rst:362
+msgid "Production Configuration"
+msgstr ""
+
+#: ../../configuration.rst:375
+msgid "Testing Configuration"
+msgstr ""
+

@@ -1,0 +1,156 @@
+# Chinese translations for GitHub Repository SEO Optimizer
+# Copyright (C) 2024, Chen Xingqiang
+# This file is distributed under the same license as the GitHub Repository
+# SEO Optimizer package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GitHub Repository SEO Optimizer 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-25 18:12+0800\n"
+"PO-Revision-Date: 2024-01-23 10:00+0800\n"
+"Last-Translator: Chen Xingqiang\n"
+"Language: zh_CN\n"
+"Language-Team: Chinese (China)\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../index.rst:47
+msgid "Getting Started"
+msgstr "入门指南"
+
+#: ../../index.rst:55
+msgid "User Guide"
+msgstr "用户指南"
+
+#: ../../index.rst:64
+msgid "API Reference"
+msgstr "API 参考"
+
+#: ../../index.rst:73
+msgid "Development"
+msgstr "开发"
+
+#: ../../index.rst:81
+msgid "Additional Resources"
+msgstr "其他资源"
+
+#: ../../index.rst:7
+msgid "GitHub Repository SEO Optimizer Documentation"
+msgstr "GitHub 仓库 SEO 优化器文档"
+
+#: ../../index.rst:9
+msgid "Python Version"
+msgstr ""
+
+#: ../../index.rst:13 ../../index.rst:104
+msgid "License"
+msgstr "许可证"
+
+#: ../../index.rst:17
+msgid "Welcome to the documentation for the GitHub Repository SEO Optimizer!"
+msgstr "欢迎使用 GitHub 仓库 SEO 优化器文档！"
+
+#: ../../index.rst:19
+msgid ""
+"**GitHub Repository SEO Optimizer** is a powerful tool designed to "
+"enhance the discoverability of GitHub repositories through automated "
+"optimization of descriptions, topics, and documentation."
+msgstr "**GitHub 仓库 SEO 优化器** 是一个强大的工具，旨在通过自动优化描述、主题和文档来提高 GitHub 仓库的可发现性。"
+
+#: ../../index.rst:22
+msgid "Key Features"
+msgstr "主要功能"
+
+#: ../../index.rst:24
+msgid ""
+"**Automated SEO Optimization**: Analyzes repositories and generates "
+"optimized descriptions and topics"
+msgstr "**自动 SEO 优化**：分析仓库并生成优化的描述和主题"
+
+#: ../../index.rst:25
+msgid ""
+"**Multiple LLM Providers**: Supports 8 different language model providers"
+" including OpenAI, Anthropic, and local models"
+msgstr "**多种 LLM 提供商**：支持 8 种不同的语言模型提供商，包括 OpenAI、Anthropic 和本地模型"
+
+#: ../../index.rst:26
+msgid "**Batch Processing**: Process multiple repositories at once"
+msgstr "**批量处理**：一次处理多个仓库"
+
+#: ../../index.rst:27
+msgid ""
+"**Commit Message Standardization**: Automatically formats commit messages"
+" to follow conventional standards"
+msgstr "**提交信息标准化**：自动格式化提交信息以遵循常规标准"
+
+#: ../../index.rst:28
+msgid "**Multi-language Support**: Documentation available in English and Chinese"
+msgstr "**多语言支持**：提供英文和中文文档"
+
+#: ../../index.rst:31
+msgid "Quick Start"
+msgstr "快速开始"
+
+#: ../../index.rst:45
+msgid "Documentation Contents"
+msgstr "文档内容"
+
+#: ../../index.rst:90
+msgid "Indices and tables"
+msgstr "索引和表格"
+
+#: ../../index.rst:92
+msgid ":ref:`genindex`"
+msgstr ""
+
+#: ../../index.rst:93
+msgid ":ref:`modindex`"
+msgstr ""
+
+#: ../../index.rst:94
+msgid ":ref:`search`"
+msgstr ""
+
+#: ../../index.rst:97
+msgid "Support"
+msgstr "支持"
+
+#: ../../index.rst:99
+msgid ""
+"**GitHub Issues**: `Report bugs or request features "
+"<https://github.com/chenxingqiang/repo-seo/issues>`_"
+msgstr ""
+"**GitHub Issues**：`报告错误或请求功能 <https://github.com/chenxingqiang/repo-"
+"seo/issues>`_"
+
+#: ../../index.rst:100
+msgid ""
+"**Documentation**: `Read the full documentation <https://repo-"
+"seo.readthedocs.io>`_"
+msgstr "**文档**：`阅读完整文档 <https://repo-seo.readthedocs.io>`_"
+
+#: ../../index.rst:101
+msgid ""
+"**Source Code**: `View on GitHub <https://github.com/chenxingqiang/repo-"
+"seo>`_"
+msgstr "**源代码**：`在 GitHub 上查看 <https://github.com/chenxingqiang/repo-seo>`_"
+
+#: ../../index.rst:106
+msgid ""
+"This project is licensed under the MIT License. See the LICENSE file for "
+"details."
+msgstr "本项目采用 MIT 许可证。详情请参见 LICENSE 文件。"
+
+#~ msgid "# Install the package"
+#~ msgstr "# 安装软件包"
+
+#~ msgid "# Optimize a single repository"
+#~ msgstr "# 优化单个仓库"
+
+#~ msgid "# Optimize all repositories for a user"
+#~ msgstr "# 优化用户的所有仓库"
+

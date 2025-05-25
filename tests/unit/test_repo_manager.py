@@ -11,7 +11,7 @@ import sys
 # Add the parent directory to the path so we can import the src module
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
-from src.repo_manager import RepoManager
+from src.repo_manager import RepositoryManager
 
 class TestRepoManager(unittest.TestCase):
     """测试仓库管理器"""
@@ -38,7 +38,7 @@ class TestRepoManager(unittest.TestCase):
         subprocess.run(['git', 'commit', '-m', 'Initial commit'], check=True, capture_output=True)
 
         # 创建仓库管理器实例
-        self.repo = RepoManager(self.test_dir)
+        self.repo = RepositoryManager()
 
     def tearDown(self):
         """清理测试环境"""

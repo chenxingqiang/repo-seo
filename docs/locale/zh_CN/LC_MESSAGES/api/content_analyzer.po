@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Chen Xingqiang
+# This file is distributed under the same license as the GitHub Repository
+# SEO Optimizer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GitHub Repository SEO Optimizer 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-25 18:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../api/content_analyzer.rst:2
+msgid "Content Analyzer API"
+msgstr ""
+
+#: ../../api/content_analyzer.rst:4
+msgid ""
+"This module analyzes repository content to extract meaningful information"
+" for SEO optimization."
+msgstr ""
+
+#: ../../api/content_analyzer.rst:7
+msgid "ContentAnalyzer Class"
+msgstr ""
+
+#: ../../api/content_analyzer.rst:15
+msgid "Analysis Models"
+msgstr ""
+
+#: ../../api/content_analyzer.rst:23
+msgid "Extractors"
+msgstr ""
+
+#: ../../api/content_analyzer.rst:31
+msgid "Usage Examples"
+msgstr ""
+
+#: ../../api/content_analyzer.rst:34
+msgid "Basic Analysis"
+msgstr ""
+
+#: ../../api/content_analyzer.rst:55
+msgid "Advanced Analysis"
+msgstr ""
+

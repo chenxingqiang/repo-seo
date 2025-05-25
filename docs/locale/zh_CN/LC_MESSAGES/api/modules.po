@@ -1,0 +1,212 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Chen Xingqiang
+# This file is distributed under the same license as the GitHub Repository
+# SEO Optimizer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GitHub Repository SEO Optimizer 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-25 18:12+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../api/modules.rst:6
+msgid "Core Modules"
+msgstr ""
+
+#: ../../api/modules.rst:2
+msgid "API Reference"
+msgstr ""
+
+#: ../../api/modules.rst:4
+msgid ""
+"This section contains the API documentation for all modules in the GitHub"
+" Repository SEO Optimizer."
+msgstr ""
+
+#: ../../api/modules.rst:16
+msgid "Module Overview"
+msgstr ""
+
+#: ../../api/modules.rst:18
+msgid "The GitHub Repository SEO Optimizer is organized into several key modules:"
+msgstr ""
+
+#: ../../api/modules.rst:21
+msgid "LLM Providers"
+msgstr ""
+
+#: ../../api/modules.rst:23
+msgid ""
+"The :doc:`llm_providers` module contains implementations for all "
+"supported language model providers:"
+msgstr ""
+
+#: ../../api/modules.rst:25
+msgid "**Base Provider**: Abstract base class for all providers"
+msgstr ""
+
+#: ../../api/modules.rst:26
+msgid "**Local Provider**: Rule-based SEO generation without external APIs"
+msgstr ""
+
+#: ../../api/modules.rst:27
+msgid "**OpenAI Provider**: Integration with OpenAI's GPT models"
+msgstr ""
+
+#: ../../api/modules.rst:28
+msgid "**Anthropic Provider**: Integration with Anthropic's Claude models"
+msgstr ""
+
+#: ../../api/modules.rst:29
+msgid "**Gemini Provider**: Integration with Google's Gemini models"
+msgstr ""
+
+#: ../../api/modules.rst:30
+msgid "**Ollama Provider**: Integration with local Ollama models"
+msgstr ""
+
+#: ../../api/modules.rst:31
+msgid "**DeepSeek Provider**: Integration with DeepSeek's models"
+msgstr ""
+
+#: ../../api/modules.rst:32
+msgid "**ZhiPu Provider**: Integration with ZhiPu AI's GLM models"
+msgstr ""
+
+#: ../../api/modules.rst:33
+msgid "**QianWen Provider**: Integration with Alibaba's QianWen models"
+msgstr ""
+
+#: ../../api/modules.rst:36
+msgid "GitHub Client"
+msgstr ""
+
+#: ../../api/modules.rst:38
+msgid "The :doc:`github_client` module handles all interactions with GitHub:"
+msgstr ""
+
+#: ../../api/modules.rst:40
+msgid "**Repository Management**: Fetch and update repository information"
+msgstr ""
+
+#: ../../api/modules.rst:41
+msgid "**Topic Management**: Validate and update repository topics"
+msgstr ""
+
+#: ../../api/modules.rst:42
+msgid "**README Operations**: Create and update README files"
+msgstr ""
+
+#: ../../api/modules.rst:43
+msgid "**Authentication**: Handle GitHub CLI authentication"
+msgstr ""
+
+#: ../../api/modules.rst:46
+msgid "SEO Generator"
+msgstr ""
+
+#: ../../api/modules.rst:48
+msgid "The :doc:`seo_generator` module is responsible for generating SEO content:"
+msgstr ""
+
+#: ../../api/modules.rst:50
+msgid "**Description Generation**: Create optimized repository descriptions"
+msgstr ""
+
+#: ../../api/modules.rst:51
+msgid "**Topic Generation**: Generate relevant topics based on content"
+msgstr ""
+
+#: ../../api/modules.rst:52
+msgid ""
+"**Keyword Extraction**: Extract important keywords from code and "
+"documentation"
+msgstr ""
+
+#: ../../api/modules.rst:55
+msgid "Content Analyzer"
+msgstr ""
+
+#: ../../api/modules.rst:57
+msgid "The :doc:`content_analyzer` module analyzes repository content:"
+msgstr ""
+
+#: ../../api/modules.rst:59
+msgid "**Language Detection**: Identify programming languages used"
+msgstr ""
+
+#: ../../api/modules.rst:60
+msgid "**Code Analysis**: Analyze code structure and patterns"
+msgstr ""
+
+#: ../../api/modules.rst:61
+msgid ""
+"**Documentation Analysis**: Extract information from existing "
+"documentation"
+msgstr ""
+
+#: ../../api/modules.rst:62
+msgid "**Dependency Analysis**: Identify project dependencies"
+msgstr ""
+
+#: ../../api/modules.rst:65
+msgid "Quick Reference"
+msgstr ""
+
+#: ../../api/modules.rst:68
+msgid "Common Imports"
+msgstr ""
+
+#: ../../api/modules.rst:90
+msgid "Basic Usage Examples"
+msgstr ""
+
+#: ../../api/modules.rst:92
+msgid "**Using LLM Providers:**"
+msgstr ""
+
+#: ../../api/modules.rst:107
+msgid "**Using GitHub Client:**"
+msgstr ""
+
+#: ../../api/modules.rst:120
+msgid "**Using SEO Generator:**"
+msgstr ""
+
+#: ../../api/modules.rst:134
+msgid "**Using Content Analyzer:**"
+msgstr ""
+
+#: ../../api/modules.rst:151
+msgid "Error Handling"
+msgstr ""
+
+#: ../../api/modules.rst:153
+msgid "All modules follow consistent error handling patterns:"
+msgstr ""
+
+#: ../../api/modules.rst:175
+msgid "Configuration"
+msgstr ""
+
+#: ../../api/modules.rst:177
+msgid ""
+"Most modules can be configured through environment variables or "
+"initialization parameters:"
+msgstr ""
+
+#: ../../api/modules.rst:195
+msgid "See individual module documentation for detailed API references."
+msgstr ""
+

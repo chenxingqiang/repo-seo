@@ -1,0 +1,282 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Chen Xingqiang
+# This file is distributed under the same license as the GitHub Repository
+# SEO Optimizer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GitHub Repository SEO Optimizer 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-25 18:12+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../quickstart.rst:2
+msgid "Quick Start Guide"
+msgstr ""
+
+#: ../../quickstart.rst:4
+msgid ""
+"This guide will help you get started with the GitHub Repository SEO "
+"Optimizer in just a few minutes."
+msgstr ""
+
+#: ../../quickstart.rst:7
+msgid "Basic Usage"
+msgstr ""
+
+#: ../../quickstart.rst:9
+msgid ""
+"The simplest way to use the tool is to optimize all repositories for a "
+"GitHub user:"
+msgstr ""
+
+#: ../../quickstart.rst:15
+msgid "This will:"
+msgstr ""
+
+#: ../../quickstart.rst:17
+msgid "Fetch all public repositories for the user"
+msgstr ""
+
+#: ../../quickstart.rst:18
+msgid "Analyze each repository's content"
+msgstr ""
+
+#: ../../quickstart.rst:19
+msgid "Generate optimized descriptions and topics"
+msgstr ""
+
+#: ../../quickstart.rst:20
+msgid "Apply the changes to GitHub"
+msgstr ""
+
+#: ../../quickstart.rst:23
+msgid "Optimizing a Single Repository"
+msgstr ""
+
+#: ../../quickstart.rst:25
+msgid "To optimize a specific repository:"
+msgstr ""
+
+#: ../../quickstart.rst:31
+msgid "Example:"
+msgstr ""
+
+#: ../../quickstart.rst:38
+msgid "Dry Run Mode"
+msgstr ""
+
+#: ../../quickstart.rst:40
+msgid "To preview changes without applying them:"
+msgstr ""
+
+#: ../../quickstart.rst:46
+msgid "This is useful for:"
+msgstr ""
+
+#: ../../quickstart.rst:48
+msgid "Reviewing proposed changes"
+msgstr ""
+
+#: ../../quickstart.rst:49
+msgid "Testing the tool"
+msgstr ""
+
+#: ../../quickstart.rst:50
+msgid "Understanding what optimizations will be made"
+msgstr ""
+
+#: ../../quickstart.rst:53
+msgid "Using Different LLM Providers"
+msgstr ""
+
+#: ../../quickstart.rst:55
+msgid ""
+"The tool supports multiple language model providers. The default is the "
+"local provider (no API key required)."
+msgstr ""
+
+#: ../../quickstart.rst:58
+msgid "Local Provider (Default)"
+msgstr ""
+
+#: ../../quickstart.rst:65
+msgid "OpenAI Provider"
+msgstr ""
+
+#: ../../quickstart.rst:67
+msgid "First, set your API key:"
+msgstr ""
+
+#: ../../quickstart.rst:73
+msgid "Then use:"
+msgstr ""
+
+#: ../../quickstart.rst:80
+msgid "Anthropic Provider"
+msgstr ""
+
+#: ../../quickstart.rst:88
+msgid "Other Providers"
+msgstr ""
+
+#: ../../quickstart.rst:90
+msgid "**Gemini**: ``--provider gemini``"
+msgstr ""
+
+#: ../../quickstart.rst:91
+msgid "**Ollama**: ``--provider ollama`` (requires local Ollama installation)"
+msgstr ""
+
+#: ../../quickstart.rst:92
+msgid "**DeepSeek**: ``--provider deepseek``"
+msgstr ""
+
+#: ../../quickstart.rst:93
+msgid "**ZhiPu**: ``--provider zhipu``"
+msgstr ""
+
+#: ../../quickstart.rst:94
+msgid "**QianWen**: ``--provider qianwen``"
+msgstr ""
+
+#: ../../quickstart.rst:97
+msgid "Batch Processing"
+msgstr ""
+
+#: ../../quickstart.rst:99
+msgid "Process multiple repositories with limits:"
+msgstr ""
+
+#: ../../quickstart.rst:110
+msgid "Output and Results"
+msgstr ""
+
+#: ../../quickstart.rst:112
+msgid "Results are saved to a JSON file:"
+msgstr ""
+
+#: ../../quickstart.rst:118
+msgid "Default output filename: ``seo_results_YYYYMMDD_HHMMSS.json``"
+msgstr ""
+
+#: ../../quickstart.rst:120
+msgid "Example output:"
+msgstr ""
+
+#: ../../quickstart.rst:140
+msgid "Common Use Cases"
+msgstr ""
+
+#: ../../quickstart.rst:143
+msgid "Optimize All Python Projects"
+msgstr ""
+
+#: ../../quickstart.rst:153
+msgid "Optimize Recently Created Repos"
+msgstr ""
+
+#: ../../quickstart.rst:155
+msgid "Use GitHub CLI to list recent repos, then optimize:"
+msgstr ""
+
+#: ../../quickstart.rst:166
+msgid "Best Practices"
+msgstr ""
+
+#: ../../quickstart.rst:168
+msgid "**Start with Dry Run**: Always test with ``--dry-run`` first"
+msgstr ""
+
+#: ../../quickstart.rst:169
+msgid "**Review Changes**: Check the generated descriptions and topics"
+msgstr ""
+
+#: ../../quickstart.rst:170
+msgid "**Use Appropriate Provider**: Choose LLM provider based on your needs"
+msgstr ""
+
+#: ../../quickstart.rst:171
+msgid ""
+"**Backup First**: Consider backing up repository metadata before bulk "
+"changes"
+msgstr ""
+
+#: ../../quickstart.rst:172
+msgid "**Rate Limits**: Be aware of GitHub API rate limits"
+msgstr ""
+
+#: ../../quickstart.rst:175
+msgid "Tips and Tricks"
+msgstr ""
+
+#: ../../quickstart.rst:178
+msgid "Check Current Repository SEO"
+msgstr ""
+
+#: ../../quickstart.rst:180
+msgid "Before optimization:"
+msgstr ""
+
+#: ../../quickstart.rst:187
+msgid "Monitor Progress"
+msgstr ""
+
+#: ../../quickstart.rst:189
+msgid "The tool provides colored output:"
+msgstr ""
+
+#: ../../quickstart.rst:191
+msgid "**Blue**: Information messages"
+msgstr ""
+
+#: ../../quickstart.rst:192
+msgid "**Green**: Success messages"
+msgstr ""
+
+#: ../../quickstart.rst:193
+msgid "**Yellow**: Warnings"
+msgstr ""
+
+#: ../../quickstart.rst:194
+msgid "**Red**: Errors"
+msgstr ""
+
+#: ../../quickstart.rst:197
+msgid "Save Different Configurations"
+msgstr ""
+
+#: ../../quickstart.rst:199
+msgid "Create shell aliases for common operations:"
+msgstr ""
+
+#: ../../quickstart.rst:208
+msgid "Next Steps"
+msgstr ""
+
+#: ../../quickstart.rst:210
+msgid "Learn about :doc:`configuration` options"
+msgstr ""
+
+#: ../../quickstart.rst:211
+msgid "Explore :doc:`guides/llm_providers` in detail"
+msgstr ""
+
+#: ../../quickstart.rst:212
+msgid "Set up :doc:`guides/commit_fixer` for better commit messages"
+msgstr ""
+
+#: ../../quickstart.rst:213
+msgid "Read about :doc:`guides/batch_processing` for large-scale operations"
+msgstr ""
+

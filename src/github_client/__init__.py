@@ -288,3 +288,9 @@ class GitHubClient:
         except Exception as e:
             self.logger.error(f"Error: {str(e)}")
             return None
+
+# GitHub client module
+
+from .github_client import GitHubClient, GitHubCliClient, GitHubApiClient
+
+__all__ = ['GitHubClient', 'GitHubCliClient', 'GitHubApiClient']

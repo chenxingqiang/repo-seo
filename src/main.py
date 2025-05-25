@@ -1,367 +1,250 @@
-import argparse
-import logging
-import json
+#!/usr/bin/env python3
+"""
+Main application logic for the GitHub Repository SEO Optimizer.
+
+This module provides the main functionality for optimizing GitHub repositories,
+including fetching repository information, analyzing content, and applying changes.
+"""
+
 import os
-import subprocess
+import sys
+import json
+import logging
+import argparse
+from typing import Dict, List, Any, Optional
 from datetime import datetime
-from pathlib import Path
-from github_client import GitHubClient
-from content_analyzer import ContentAnalyzer
-from seo_generator import SEOGenerator
 
-def setup_logging(verbose: bool = False):
-    """Set up logging configuration"""
-    level = logging.DEBUG if verbose else logging.INFO
-    logging.basicConfig(
-        level=level,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    )
+from .config import config
+from .github_client import GitHubCliClient, GitHubApiClient
+from .content_analyzer import ContentAnalyzer
+from .seo_generator import SEOGenerator
+from .utils.common import save_json, generate_timestamp
 
-def commit_docs_changes(repo_name: str, logger):
-    """Commit changes in docs directory using subprocess for better control"""
-    try:
-        # Add changes
-        subprocess.run(['git', 'add', 'docs/'], check=True)
+# Configure logging
+logger = logging.getLogger(__name__)
 
-        # Create commit message
-        commit_message = f"docs: Update repository documentation for {repo_name} ({datetime.now().strftime('%Y-%m-%d %H:%M:%S')})"
 
-        # Commit changes
-        subprocess.run(['git', 'commit', '-m', commit_message], check=True)
+class RepositoryOptimizer:
+    """Repository optimizer for GitHub repositories."""
+    
+    def __init__(self, provider_name: str = "local", apply_changes: bool = False, 
+                sync_forks: bool = True, github_token: Optional[str] = None):
+        """Initialize the repository optimizer.
+        
+        Args:
+            provider_name: The name of the LLM provider to use.
+            apply_changes: Whether to apply changes to repositories.
+            sync_forks: Whether to sync forked repositories with their upstream.
+            github_token: The GitHub API token, or None to use the GitHub CLI.
+        """
+        self.provider_name = provider_name
+        self.apply_changes = apply_changes
+        self.sync_forks = sync_forks
+        
+        # Initialize GitHub client
+        if github_token:
+            self.github = GitHubApiClient(token=github_token)
+            logger.info("Using GitHub API client")
+        else:
+            self.github = GitHubCliClient()
+            logger.info("Using GitHub CLI client")
+        
+        # Initialize content analyzer
+        self.analyzer = ContentAnalyzer()
+        
+        # Initialize SEO generator
+        self.generator = SEOGenerator(provider_name=provider_name)
+        
+        logger.info(f"Initialized repository optimizer with provider: {provider_name}")
+        logger.info(f"Apply changes: {apply_changes}")
+        logger.info(f"Sync forks: {sync_forks}")
+    
+    def optimize_user_repositories(self, username: str, max_repos: int = 100) -> List[Dict[str, Any]]:
+        """Optimize all repositories for a user.
+        
+        Args:
+            username: The GitHub username.
+            max_repos: The maximum number of repositories to optimize.
+            
+        Returns:
+            A list of optimization results.
+        """
+        logger.info(f"Optimizing repositories for user: {username}")
+        
+        # Get the user's repositories
+        repositories = self.github.get_user_repositories(username)
+        
+        if not repositories:
+            logger.warning(f"No repositories found for user: {username}")
+            return []
+        
+        logger.info(f"Found {len(repositories)} repositories")
+        
+        # Limit the number of repositories
+        if len(repositories) > max_repos:
+            logger.info(f"Limiting to {max_repos} repositories")
+            repositories = repositories[:max_repos]
+        
+        # Optimize each repository
+        results = []
+        for i, repo in enumerate(repositories):
+            repo_name = repo.get("name")
+            logger.info(f"Processing repository {i+1}/{len(repositories)}: {repo_name}")
+            
+            try:
+                result = self.optimize_repository(username, repo_name)
+                results.append(result)
+            except Exception as e:
+                logger.error(f"Error optimizing repository {repo_name}: {e}")
+                results.append({
+                    "name": repo_name,
+                    "error": str(e),
+                    "success": False
+                })
+        
+        logger.info(f"Optimized {len(results)} repositories")
+        
+        # Save the results
+        timestamp = generate_timestamp()
+        results_file = f"seo_results_{timestamp}.json"
+        save_json(results, results_file)
+        logger.info(f"Results saved to {results_file}")
+        
+        return results
+    
+    def optimize_repository(self, owner: str, repo: str) -> Dict[str, Any]:
+        """Optimize a single repository.
+        
+        Args:
+            owner: The repository owner.
+            repo: The repository name.
+            
+        Returns:
+            A dictionary containing the optimization results.
+        """
+        logger.info(f"Optimizing repository: {owner}/{repo}")
+        
+        # Check if the repository is a fork and sync it if needed
+        if self.sync_forks and self.github.is_fork(owner, repo):
+            logger.info(f"Repository {repo} is a fork, syncing with upstream")
+            self.github.sync_fork(owner, repo)
+        
+        # Get repository information
+        repository = self.github.get_repository(owner, repo)
+        if not repository:
+            raise ValueError(f"Repository {owner}/{repo} not found")
+        
+        # Get repository languages
+        languages = list(self.github.get_repository_languages(owner, repo).keys())
+        
+        # Get repository topics
+        topics = self.github.get_repository_topics(owner, repo)
+        
+        # Get repository README
+        readme = self.github.get_repository_readme(owner, repo) or ""
+        
+        # Get repository description
+        description = repository.get("description", "")
+        
+        # Optimize the repository content
+        optimization = self.generator.optimize_repository(
+            repo_name=repo,
+            languages=languages,
+            current_topics=topics,
+            current_description=description,
+            readme=readme
+        )
+        
+        # Apply changes if requested
+        if self.apply_changes:
+            changes = optimization.get("changes", {})
+            
+            # Update description and topics
+            if changes.get("description") or changes.get("topics"):
+                logger.info(f"Updating description and topics for {repo}")
+                self.github.update_repository(
+                    owner=owner,
+                    repo=repo,
+                    description=optimization.get("new_description"),
+                    topics=optimization.get("new_topics")
+                )
+            
+            # Update README
+            if changes.get("readme"):
+                logger.info(f"Updating README for {repo}")
+                self.github.update_repository_readme(
+                    owner=owner,
+                    repo=repo,
+                    content=optimization.get("new_readme"),
+                    message="Update README with SEO optimization"
+                )
+        
+        # Add repository information to the results
+        optimization["owner"] = owner
+        optimization["repo"] = repo
+        optimization["success"] = True
+        optimization["timestamp"] = datetime.now().isoformat()
+        
+        return optimization
 
-        # Push changes
-        subprocess.run(['git', 'push', 'origin', 'main'], check=True)
-
-        logger.info("Successfully committed and pushed documentation changes")
-        return True
-    except subprocess.CalledProcessError as e:
-        logger.error(f"Error in git operations: {e.stderr if e.stderr else str(e)}")
-        return False
-    except Exception as e:
-        logger.error(f"Error committing changes: {str(e)}")
-        return False
-
-def generate_code_summary(github_client: GitHubClient, username: str, repo_name: str) -> str:
-    """Generate a markdown summary of the repository code structure"""
-    tree = github_client.get_repo_tree(username, repo_name)
-
-    summary = f"# Code Summary for {repo_name}\n\n"
-    summary += f"Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
-
-    # Group files by directory
-    directories = {}
-    for item in tree:
-        if item['type'] == 'blob':  # Only process files
-            path = Path(item['path'])
-            directory = str(path.parent)
-            if directory == '.':
-                directory = 'root'
-
-            if directory not in directories:
-                directories[directory] = []
-            directories[directory].append(path.name)
-
-    # Generate markdown
-    for directory, files in sorted(directories.items()):
-        summary += f"## {directory}\n\n"
-        for file in sorted(files):
-            summary += f"- {file}\n"
-        summary += "\n"
-
-    return summary
-
-def generate_commit_timeline(github_client: GitHubClient, username: str, repo_name: str) -> str:
-    """Generate a markdown timeline of repository commits"""
-    commits = github_client.get_repo_commits(username, repo_name)
-
-    timeline = f"# Commit Timeline for {repo_name}\n\n"
-    timeline += f"Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
-
-    for commit in commits:
-        commit_data = commit['commit']
-        author = commit_data['author']
-        date = datetime.strptime(author['date'], "%Y-%m-%dT%H:%M:%SZ").strftime("%Y-%m-%d %H:%M:%S")
-
-        timeline += f"## {date}\n\n"
-        timeline += f"**Author:** {author['name']} <{author['email']}>\n\n"
-        timeline += f"**Message:**\n{commit_data['message']}\n\n"
-        timeline += "---\n\n"
-
-    return timeline
-
-def generate_target_doc(github_client: GitHubClient, username: str, repo_name: str) -> str:
-    """Generate a target document outlining repository goals and plans"""
-    repo_data = github_client.get_repo_data(username, repo_name)
-    readme_content = github_client.get_repo_content(username, repo_name)
-
-    target_doc = f"# Repository Targets and Plans for {repo_name}\n\n"
-    target_doc += f"Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
-
-    # Current Status
-    target_doc += "## Current Status\n\n"
-    target_doc += f"**Repository:** [{repo_name}]({repo_data.get('url', '')})\n\n"
-    target_doc += f"**Description:** {repo_data.get('description', 'No description')}\n\n"
-    if repo_data.get('primaryLanguage', {}).get('name'):
-        target_doc += f"**Primary Language:** {repo_data['primaryLanguage']['name']}\n\n"
-
-    # Topics
-    if repo_data.get('repositoryTopics'):
-        target_doc += "**Topics:**\n"
-        for topic in repo_data['repositoryTopics']:
-            target_doc += f"- {topic.get('name', '')}\n"
-        target_doc += "\n"
-
-    # Goals and Objectives
-    target_doc += "## Goals and Objectives\n\n"
-    target_doc += "1. **Code Quality**\n"
-    target_doc += "   - Maintain high code quality standards\n"
-    target_doc += "   - Regular code reviews and updates\n"
-    target_doc += "   - Comprehensive documentation\n\n"
-
-    target_doc += "2. **Feature Development**\n"
-    target_doc += "   - Implement core functionality\n"
-    target_doc += "   - Add new features based on user feedback\n"
-    target_doc += "   - Regular feature updates\n\n"
-
-    target_doc += "3. **Documentation**\n"
-    target_doc += "   - Maintain up-to-date README\n"
-    target_doc += "   - Code documentation and comments\n"
-    target_doc += "   - Usage examples and tutorials\n\n"
-
-    target_doc += "4. **Community**\n"
-    target_doc += "   - Encourage community contributions\n"
-    target_doc += "   - Respond to issues and pull requests\n"
-    target_doc += "   - Regular communication with users\n\n"
-
-    # Development Plan
-    target_doc += "## Development Plan\n\n"
-    target_doc += "### Short-term Goals (1-3 months)\n\n"
-    target_doc += "- [ ] Complete core functionality\n"
-    target_doc += "- [ ] Add comprehensive tests\n"
-    target_doc += "- [ ] Improve documentation\n"
-    target_doc += "- [ ] Set up CI/CD pipeline\n\n"
-
-    target_doc += "### Medium-term Goals (3-6 months)\n\n"
-    target_doc += "- [ ] Add advanced features\n"
-    target_doc += "- [ ] Optimize performance\n"
-    target_doc += "- [ ] Increase test coverage\n"
-    target_doc += "- [ ] Add integration examples\n\n"
-
-    target_doc += "### Long-term Goals (6+ months)\n\n"
-    target_doc += "- [ ] Scale the project\n"
-    target_doc += "- [ ] Build community\n"
-    target_doc += "- [ ] Add enterprise features\n"
-    target_doc += "- [ ] Regular maintenance and updates\n\n"
-
-    # Contribution Guidelines
-    target_doc += "## Contribution Guidelines\n\n"
-    target_doc += "1. Fork the repository\n"
-    target_doc += "2. Create a feature branch\n"
-    target_doc += "3. Make your changes\n"
-    target_doc += "4. Add or update tests\n"
-    target_doc += "5. Update documentation\n"
-    target_doc += "6. Submit a pull request\n\n"
-
-    # Maintenance Plan
-    target_doc += "## Maintenance Plan\n\n"
-    target_doc += "### Regular Tasks\n\n"
-    target_doc += "- Weekly code reviews\n"
-    target_doc += "- Monthly dependency updates\n"
-    target_doc += "- Quarterly security audits\n"
-    target_doc += "- Regular backup and maintenance\n\n"
-
-    target_doc += "### Quality Assurance\n\n"
-    target_doc += "- Automated testing\n"
-    target_doc += "- Code coverage monitoring\n"
-    target_doc += "- Performance benchmarking\n"
-    target_doc += "- Security scanning\n\n"
-
-    return target_doc
-
-def process_code_summary(github_client: GitHubClient, username: str, repo_name: str, logger: logging.Logger) -> bool:
-    """Process code summary task"""
-    try:
-        logger.info(f"Generating code summary for {repo_name}")
-        code_summary = generate_code_summary(github_client, username, repo_name)
-        summary_filename = os.path.join('docs', f"code-summary-{datetime.now().strftime('%Y%m%d-%H%M%S')}.md")
-        with open(summary_filename, 'w') as f:
-            f.write(code_summary)
-        logger.info(f"Code summary saved to {summary_filename}")
-        return True
-    except Exception as e:
-        logger.error(f"Error generating code summary: {str(e)}")
-        return False
-
-def process_commit_timeline(github_client: GitHubClient, username: str, repo_name: str, logger: logging.Logger) -> bool:
-    """Process commit timeline task"""
-    try:
-        logger.info(f"Generating commit timeline for {repo_name}")
-        commit_timeline = generate_commit_timeline(github_client, username, repo_name)
-        timeline_filename = os.path.join('docs', "commit-timeline-info.md")
-        with open(timeline_filename, 'w') as f:
-            f.write(commit_timeline)
-        logger.info(f"Commit timeline saved to {timeline_filename}")
-        return True
-    except Exception as e:
-        logger.error(f"Error generating commit timeline: {str(e)}")
-        return False
-
-def process_target_doc(github_client: GitHubClient, username: str, repo_name: str, logger: logging.Logger) -> bool:
-    """Process target document task"""
-    try:
-        logger.info(f"Generating target document for {repo_name}")
-        target_doc = generate_target_doc(github_client, username, repo_name)
-        target_filename = os.path.join('docs', "target.md")
-        with open(target_filename, 'w') as f:
-            f.write(target_doc)
-        logger.info(f"Target document saved to {target_filename}")
-        return True
-    except Exception as e:
-        logger.error(f"Error generating target document: {str(e)}")
-        return False
-
-def process_seo_analysis(github_client: GitHubClient, content_analyzer: ContentAnalyzer,
-                        seo_generator: SEOGenerator, username: str, repo_name: str,
-                        logger: logging.Logger, update_description: bool = False) -> bool:
-    """Process SEO analysis task"""
-    try:
-        logger.info(f"Analyzing repository content for SEO: {repo_name}")
-
-        # Get repository data
-        repo_data = github_client.get_repo_data(username, repo_name)
-        if not repo_data:
-            logger.error("Failed to fetch repository data")
-            return False
-
-        # Analyze repository content
-        analyzed_data = content_analyzer.analyze_repository(repo_data)
-
-        # Get and analyze README content
-        readme_content = github_client.get_repo_content(username, repo_name)
-        if readme_content:
-            summary, topics, entities = content_analyzer.analyze_readme(readme_content)
-            analyzed_data["readme_summary"] = summary
-            analyzed_data["readme_topics"] = topics
-            analyzed_data["readme_entities"] = entities
-
-        # Generate SEO optimizations
-        seo_data = seo_generator.optimize_repository(analyzed_data)
-
-        # Generate SEO report
-        report = f"# SEO Analysis Report for {repo_name}\n\n"
-        report += f"Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
-
-        report += "## Current Description\n\n"
-        report += f"{repo_data.get('description', 'No description')}\n\n"
-
-        report += "## Suggested Description\n\n"
-        report += f"{seo_data.get('seo_description', 'No suggestion')}\n\n"
-
-        report += "## Keywords\n\n"
-        keywords = seo_data.get('seo_keywords', [])
-        for keyword in keywords:
-            report += f"- {keyword}\n"
-        report += "\n"
-
-        if analyzed_data.get('readme_topics'):
-            report += "## README Topics\n\n"
-            for topic in analyzed_data['readme_topics']:
-                report += f"- {topic}\n"
-            report += "\n"
-
-        if analyzed_data.get('readme_entities'):
-            report += "## Named Entities\n\n"
-            for entity in analyzed_data['readme_entities']:
-                report += f"- {entity}\n"
-            report += "\n"
-
-        # Save the report
-        report_filename = os.path.join('docs', f"seo-report-{datetime.now().strftime('%Y%m%d-%H%M%S')}.md")
-        with open(report_filename, 'w') as f:
-            f.write(report)
-        logger.info(f"SEO report saved to {report_filename}")
-
-        # Update repository description if requested
-        if update_description and seo_data.get('seo_description'):
-            logger.info("Updating repository description...")
-            if github_client.update_repo_description(username, repo_name, seo_data['seo_description']):
-                logger.info("Repository description updated successfully")
-            else:
-                logger.warning("Failed to update repository description")
-
-        return True
-    except Exception as e:
-        logger.error(f"Error in SEO analysis: {str(e)}")
-        return False
 
 def main():
-    parser = argparse.ArgumentParser(description='GitHub Repository SEO Enhancement Tool')
-    parser.add_argument('--username', required=True, help='GitHub username')
-    parser.add_argument('-v', '--verbose', action='store_true', help='Enable verbose output')
-    parser.add_argument('--task', choices=['code-summary', 'commit-timeline', 'seo-analysis', 'target', 'all'],
-                      default='all', help='Specific task to run (default: all)')
-    parser.add_argument('--no-commit', action='store_true',
-                      help='Do not commit changes to repository')
-    parser.add_argument('--update-description', action='store_true',
-                      help='Update repository description with SEO-optimized version')
+    """Main function for the repository optimizer."""
+    parser = argparse.ArgumentParser(description="GitHub Repository SEO Optimizer")
+    parser.add_argument("username", help="GitHub username")
+    parser.add_argument("--apply", action="store_true", help="Apply changes (default is dry run)")
+    parser.add_argument("--provider", default="local", help="LLM provider to use (default: local)")
+    parser.add_argument("--no-sync", action="store_true", help="Don't sync forked repositories")
+    parser.add_argument("--max-repos", type=int, default=100, help="Maximum number of repositories to optimize")
+    parser.add_argument("--token", help="GitHub API token (default: use GitHub CLI)")
+    parser.add_argument("--verbose", action="store_true", help="Enable verbose logging")
+    
     args = parser.parse_args()
-
-    # Set up logging
-    setup_logging(args.verbose)
-    logger = logging.getLogger(__name__)
-
+    
+    # Configure logging
+    log_level = "DEBUG" if args.verbose else "INFO"
+    logging.basicConfig(
+        level=getattr(logging, log_level),
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    )
+    
+    # Initialize the optimizer
+    optimizer = RepositoryOptimizer(
+        provider_name=args.provider,
+        apply_changes=args.apply,
+        sync_forks=not args.no_sync,
+        github_token=args.token
+    )
+    
+    # Optimize repositories
     try:
-        # Initialize components
-        logger.info("Initializing components...")
-        github_client = GitHubClient()
-        content_analyzer = ContentAnalyzer()
-        seo_generator = SEOGenerator()
-
-        # Authenticate and check GitHub CLI
-        logger.info("Checking GitHub CLI authentication...")
-        if not github_client.check_auth():
-            logger.error("GitHub CLI authentication failed")
-            return
-
-        # Process current repository (repo-seo)
-        repo_name = "repo-seo"
-        logger.info(f"Processing repository: {repo_name}")
-
-        try:
-            # Create docs directory if it doesn't exist
-            os.makedirs('docs', exist_ok=True)
-
-            success = True
-            if args.task in ['code-summary', 'all']:
-                success &= process_code_summary(github_client, args.username, repo_name, logger)
-
-            if args.task in ['commit-timeline', 'all']:
-                success &= process_commit_timeline(github_client, args.username, repo_name, logger)
-
-            if args.task in ['seo-analysis', 'all']:
-                success &= process_seo_analysis(github_client, content_analyzer, seo_generator,
-                                             args.username, repo_name, logger, args.update_description)
-
-            if args.task in ['target', 'all']:
-                success &= process_target_doc(github_client, args.username, repo_name, logger)
-
-            # Commit changes if requested and if all tasks succeeded
-            if success and not args.no_commit:
-                logger.info("Committing documentation changes...")
-                if commit_docs_changes(repo_name, logger):
-                    logger.info("Documentation update completed successfully")
-                else:
-                    logger.warning("Failed to commit documentation changes")
-            elif not success:
-                logger.error("One or more tasks failed, skipping commit")
-            else:
-                logger.info("Changes were not committed (--no-commit flag was set)")
-
-        except Exception as e:
-            logger.error(f"Error processing repository {repo_name}: {str(e)}")
-
+        results = optimizer.optimize_user_repositories(
+            username=args.username,
+            max_repos=args.max_repos
+        )
+        
+        # Print summary
+        print("\nOptimization Summary:")
+        print(f"Processed {len(results)} repositories")
+        
+        success_count = sum(1 for r in results if r.get("success", False))
+        print(f"Successfully optimized: {success_count}")
+        
+        error_count = sum(1 for r in results if not r.get("success", False))
+        print(f"Errors: {error_count}")
+        
+        changes_count = sum(1 for r in results if any(r.get("changes", {}).values()))
+        print(f"Repositories with changes: {changes_count}")
+        
+        if args.apply:
+            print("\nChanges have been applied to the repositories.")
+        else:
+            print("\nThis was a dry run. Use --apply to apply changes.")
+        
     except Exception as e:
-        logger.error(f"An error occurred: {str(e)}")
+        logger.error(f"Error optimizing repositories: {e}")
+        sys.exit(1)
+
 
 if __name__ == "__main__":
     main()

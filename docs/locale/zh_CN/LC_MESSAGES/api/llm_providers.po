@@ -1,0 +1,746 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Chen Xingqiang
+# This file is distributed under the same license as the GitHub Repository
+# SEO Optimizer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GitHub Repository SEO Optimizer 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-25 18:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../api/llm_providers.rst:2
+msgid "LLM Providers API"
+msgstr ""
+
+#: ../../api/llm_providers.rst:4
+msgid ""
+"This module provides interfaces for various Large Language Model "
+"providers."
+msgstr ""
+
+#: ../../api/llm_providers.rst:7
+msgid "Base Provider"
+msgstr ""
+
+#: llm_providers.base_provider:1 of
+msgid "Base provider class for LLM providers."
+msgstr ""
+
+#: llm_providers.base_provider:3 of
+msgid ""
+"This module defines the base interface that all LLM providers must "
+"implement."
+msgstr ""
+
+#: llm_providers.base_provider.BaseProvider:1 of
+msgid "Bases: :py:class:`~abc.ABC`"
+msgstr ""
+
+#: llm_providers.base_provider.BaseProvider:1 of
+msgid "Base class for LLM providers."
+msgstr ""
+
+#: llm_providers.base_provider.BaseProvider:3 of
+msgid "All LLM providers must inherit from this class and implement its methods."
+msgstr ""
+
+#: llm_providers.base_provider.BaseProvider.generate_description:1 of
+msgid "Generate a description for a repository."
+msgstr ""
+
+#: ../../api/llm_providers.rst
+msgid "Parameters"
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.generate_description:3
+#: llm_providers.anthropic_provider.AnthropicProvider.generate_readme:3
+#: llm_providers.anthropic_provider.AnthropicProvider.generate_topics:3
+#: llm_providers.base_provider.BaseProvider.generate_description:3
+#: llm_providers.base_provider.BaseProvider.generate_readme:3
+#: llm_providers.base_provider.BaseProvider.generate_topics:3
+#: llm_providers.gemini_provider.GeminiProvider.generate_description:3
+#: llm_providers.gemini_provider.GeminiProvider.generate_readme:3
+#: llm_providers.gemini_provider.GeminiProvider.generate_topics:3
+#: llm_providers.local_provider.LocalProvider.generate_description:3
+#: llm_providers.local_provider.LocalProvider.generate_readme:3
+#: llm_providers.local_provider.LocalProvider.generate_topics:3
+#: llm_providers.openai_provider.OpenAIProvider.generate_description:3
+#: llm_providers.openai_provider.OpenAIProvider.generate_readme:3
+#: llm_providers.openai_provider.OpenAIProvider.generate_topics:3 of
+msgid "The name of the repository."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.generate_description:4
+#: llm_providers.anthropic_provider.AnthropicProvider.generate_readme:4
+#: llm_providers.anthropic_provider.AnthropicProvider.generate_topics:4
+#: llm_providers.base_provider.BaseProvider.generate_description:4
+#: llm_providers.base_provider.BaseProvider.generate_readme:4
+#: llm_providers.base_provider.BaseProvider.generate_topics:4
+#: llm_providers.deepseek_provider.DeepSeekProvider.generate_description:4
+#: llm_providers.deepseek_provider.DeepSeekProvider.generate_topics:4
+#: llm_providers.gemini_provider.GeminiProvider.generate_description:4
+#: llm_providers.gemini_provider.GeminiProvider.generate_readme:4
+#: llm_providers.gemini_provider.GeminiProvider.generate_topics:4
+#: llm_providers.local_provider.LocalProvider.generate_description:4
+#: llm_providers.local_provider.LocalProvider.generate_readme:4
+#: llm_providers.local_provider.LocalProvider.generate_topics:4
+#: llm_providers.ollama_provider.OllamaProvider.generate_description:4
+#: llm_providers.ollama_provider.OllamaProvider.generate_topics:4
+#: llm_providers.openai_provider.OpenAIProvider.generate_description:4
+#: llm_providers.openai_provider.OpenAIProvider.generate_readme:4
+#: llm_providers.openai_provider.OpenAIProvider.generate_topics:4
+#: llm_providers.qianwen_provider.QianwenProvider.generate_description:4
+#: llm_providers.qianwen_provider.QianwenProvider.generate_topics:4
+#: llm_providers.zhipu_provider.ZhipuProvider.generate_description:4
+#: llm_providers.zhipu_provider.ZhipuProvider.generate_topics:4 of
+msgid "List of programming languages used in the repository."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.generate_description:5
+#: llm_providers.anthropic_provider.AnthropicProvider.generate_topics:5
+#: llm_providers.base_provider.BaseProvider.generate_description:5
+#: llm_providers.base_provider.BaseProvider.generate_topics:5
+#: llm_providers.gemini_provider.GeminiProvider.generate_description:5
+#: llm_providers.gemini_provider.GeminiProvider.generate_topics:5
+#: llm_providers.local_provider.LocalProvider.generate_description:5
+#: llm_providers.local_provider.LocalProvider.generate_topics:5
+#: llm_providers.openai_provider.OpenAIProvider.generate_description:5
+#: llm_providers.openai_provider.OpenAIProvider.generate_topics:5 of
+msgid "List of current topics for the repository."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.analyze_readme:3
+#: llm_providers.anthropic_provider.AnthropicProvider.generate_description:6
+#: llm_providers.anthropic_provider.AnthropicProvider.generate_topics:6
+#: llm_providers.base_provider.BaseProvider.analyze_readme:3
+#: llm_providers.base_provider.BaseProvider.generate_description:6
+#: llm_providers.base_provider.BaseProvider.generate_topics:6
+#: llm_providers.gemini_provider.GeminiProvider.analyze_readme:3
+#: llm_providers.gemini_provider.GeminiProvider.generate_description:6
+#: llm_providers.gemini_provider.GeminiProvider.generate_topics:6
+#: llm_providers.local_provider.LocalProvider.analyze_readme:3
+#: llm_providers.local_provider.LocalProvider.generate_description:6
+#: llm_providers.local_provider.LocalProvider.generate_topics:6
+#: llm_providers.openai_provider.OpenAIProvider.analyze_readme:3
+#: llm_providers.openai_provider.OpenAIProvider.generate_description:6
+#: llm_providers.openai_provider.OpenAIProvider.generate_topics:6 of
+msgid "The content of the repository's README file."
+msgstr ""
+
+#: ../../api/llm_providers.rst
+msgid "Returns"
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.generate_description:8
+#: llm_providers.base_provider.BaseProvider.generate_description:8
+#: llm_providers.gemini_provider.GeminiProvider.generate_description:8
+#: llm_providers.local_provider.LocalProvider.generate_description:8
+#: llm_providers.openai_provider.OpenAIProvider.generate_description:8 of
+msgid "A string containing the generated description."
+msgstr ""
+
+#: llm_providers.base_provider.BaseProvider.generate_topics:1 of
+msgid "Generate topics for a repository."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.generate_topics:8
+#: llm_providers.base_provider.BaseProvider.generate_topics:8
+#: llm_providers.gemini_provider.GeminiProvider.generate_topics:8
+#: llm_providers.local_provider.LocalProvider.generate_topics:8
+#: llm_providers.openai_provider.OpenAIProvider.generate_topics:8 of
+msgid "A list of strings containing the generated topics."
+msgstr ""
+
+#: llm_providers.base_provider.BaseProvider.analyze_readme:1 of
+msgid "Analyze the content of a README file."
+msgstr ""
+
+#: llm_providers.base_provider.BaseProvider.analyze_readme:5 of
+msgid ""
+"- summary: A summary of the README content. - topics: A list of topics "
+"extracted from the README. - entities: A list of named entities extracted"
+" from the README. - sentiment: The sentiment of the README content. - "
+"readability: The readability score of the README content. - suggestions: "
+"Suggestions for improving the README content."
+msgstr ""
+
+#: llm_providers.base_provider.BaseProvider.analyze_readme:7 of
+msgid "summary: A summary of the README content."
+msgstr ""
+
+#: llm_providers.base_provider.BaseProvider.analyze_readme:8 of
+msgid "topics: A list of topics extracted from the README."
+msgstr ""
+
+#: llm_providers.base_provider.BaseProvider.analyze_readme:9 of
+msgid "entities: A list of named entities extracted from the README."
+msgstr ""
+
+#: llm_providers.base_provider.BaseProvider.analyze_readme:10 of
+msgid "sentiment: The sentiment of the README content."
+msgstr ""
+
+#: llm_providers.base_provider.BaseProvider.analyze_readme:11 of
+msgid "readability: The readability score of the README content."
+msgstr ""
+
+#: llm_providers.base_provider.BaseProvider.analyze_readme:12 of
+msgid "suggestions: Suggestions for improving the README content."
+msgstr ""
+
+#: ../../api/llm_providers.rst
+msgid "Return type"
+msgstr ""
+
+#: llm_providers.base_provider.BaseProvider.generate_readme:1 of
+msgid "Generate a README file for a repository."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.generate_readme:5
+#: llm_providers.base_provider.BaseProvider.generate_readme:5
+#: llm_providers.gemini_provider.GeminiProvider.generate_readme:5
+#: llm_providers.local_provider.LocalProvider.generate_readme:5
+#: llm_providers.openai_provider.OpenAIProvider.generate_readme:5 of
+msgid "List of topics for the repository."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.generate_readme:6
+#: llm_providers.base_provider.BaseProvider.generate_readme:6
+#: llm_providers.gemini_provider.GeminiProvider.generate_readme:6
+#: llm_providers.local_provider.LocalProvider.generate_readme:6
+#: llm_providers.openai_provider.OpenAIProvider.generate_readme:6 of
+msgid "The description of the repository."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.generate_readme:7
+#: llm_providers.base_provider.BaseProvider.generate_readme:7
+#: llm_providers.gemini_provider.GeminiProvider.generate_readme:7
+#: llm_providers.local_provider.LocalProvider.generate_readme:7
+#: llm_providers.openai_provider.OpenAIProvider.generate_readme:7 of
+msgid "The content of the existing README file, if any."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.generate_readme:9
+#: llm_providers.base_provider.BaseProvider.generate_readme:9
+#: llm_providers.gemini_provider.GeminiProvider.generate_readme:9
+#: llm_providers.local_provider.LocalProvider.generate_readme:9
+#: llm_providers.openai_provider.OpenAIProvider.generate_readme:9 of
+msgid "A string containing the generated README content."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.validate_api_key:1
+#: llm_providers.base_provider.BaseProvider.validate_api_key:1
+#: llm_providers.gemini_provider.GeminiProvider.validate_api_key:1
+#: llm_providers.openai_provider.OpenAIProvider.validate_api_key:1 of
+msgid "Validate the API key for the provider."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.validate_api_key:3
+#: llm_providers.base_provider.BaseProvider.validate_api_key:3
+#: llm_providers.gemini_provider.GeminiProvider.validate_api_key:3
+#: llm_providers.openai_provider.OpenAIProvider.validate_api_key:3 of
+msgid "True if the API key is valid, False otherwise."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.get_model_info:1
+#: llm_providers.base_provider.BaseProvider.get_model_info:1
+#: llm_providers.gemini_provider.GeminiProvider.get_model_info:1
+#: llm_providers.local_provider.LocalProvider.get_model_info:1
+#: llm_providers.openai_provider.OpenAIProvider.get_model_info:1 of
+msgid "Get information about the model used by the provider."
+msgstr ""
+
+#: llm_providers.base_provider.BaseProvider.get_model_info:3 of
+msgid ""
+"- name: The name of the model. - version: The version of the model. - "
+"provider: The name of the provider. - capabilities: A list of "
+"capabilities of the model."
+msgstr ""
+
+#: llm_providers.base_provider.BaseProvider.get_model_info:5 of
+msgid "name: The name of the model."
+msgstr ""
+
+#: llm_providers.base_provider.BaseProvider.get_model_info:6 of
+msgid "version: The version of the model."
+msgstr ""
+
+#: llm_providers.base_provider.BaseProvider.get_model_info:7 of
+msgid "provider: The name of the provider."
+msgstr ""
+
+#: llm_providers.base_provider.BaseProvider.get_model_info:8 of
+msgid "capabilities: A list of capabilities of the model."
+msgstr ""
+
+#: ../../api/llm_providers.rst:15
+msgid "OpenAI Provider"
+msgstr ""
+
+#: llm_providers.openai_provider:1 of
+msgid "OpenAI provider implementation for the GitHub Repository SEO Optimizer."
+msgstr ""
+
+#: llm_providers.openai_provider:3 of
+msgid ""
+"This module provides an implementation of the BaseProvider interface that"
+" uses the OpenAI API to generate content."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider:1
+#: llm_providers.gemini_provider.GeminiProvider:1
+#: llm_providers.local_provider.LocalProvider:1
+#: llm_providers.openai_provider.OpenAIProvider:1 of
+msgid "Bases: :py:class:`~llm_providers.base_provider.BaseProvider`"
+msgstr ""
+
+#: llm_providers.openai_provider.OpenAIProvider:1 of
+msgid "OpenAI provider implementation that uses the OpenAI API."
+msgstr ""
+
+#: llm_providers.openai_provider.OpenAIProvider:3 of
+msgid ""
+"This provider requires an OpenAI API key to be set in the OPENAI_API_KEY "
+"environment variable."
+msgstr ""
+
+#: llm_providers.openai_provider.OpenAIProvider.__init__:1 of
+msgid "Initialize the OpenAI provider."
+msgstr ""
+
+#: llm_providers.openai_provider.OpenAIProvider.__init__:3 of
+msgid ""
+"The OpenAI API key, or None to use the OPENAI_API_KEY environment "
+"variable."
+msgstr ""
+
+#: llm_providers.openai_provider.OpenAIProvider.__init__:4 of
+msgid "The OpenAI model to use."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.__init__:5
+#: llm_providers.gemini_provider.GeminiProvider.__init__:5
+#: llm_providers.openai_provider.OpenAIProvider.__init__:5 of
+msgid "The temperature to use for generation."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.__init__:6
+#: llm_providers.gemini_provider.GeminiProvider.__init__:6
+#: llm_providers.openai_provider.OpenAIProvider.__init__:6 of
+msgid "The maximum number of tokens to generate."
+msgstr ""
+
+#: llm_providers.openai_provider.OpenAIProvider.generate_description:1 of
+msgid "Generate a description for a repository using the OpenAI API."
+msgstr ""
+
+#: llm_providers.openai_provider.OpenAIProvider.generate_topics:1 of
+msgid "Generate topics for a repository using the OpenAI API."
+msgstr ""
+
+#: llm_providers.openai_provider.OpenAIProvider.analyze_readme:1 of
+msgid "Analyze the content of a README file using the OpenAI API."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.analyze_readme:5
+#: llm_providers.gemini_provider.GeminiProvider.analyze_readme:5
+#: llm_providers.local_provider.LocalProvider.analyze_readme:5
+#: llm_providers.openai_provider.OpenAIProvider.analyze_readme:5 of
+msgid "A dictionary containing the analysis results."
+msgstr ""
+
+#: llm_providers.openai_provider.OpenAIProvider.generate_readme:1 of
+msgid "Generate a README file for a repository using the OpenAI API."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.get_model_info:3
+#: llm_providers.gemini_provider.GeminiProvider.get_model_info:3
+#: llm_providers.local_provider.LocalProvider.get_model_info:3
+#: llm_providers.openai_provider.OpenAIProvider.get_model_info:3 of
+msgid "A dictionary containing information about the model."
+msgstr ""
+
+#: ../../api/llm_providers.rst:23
+msgid "Anthropic Provider"
+msgstr ""
+
+#: llm_providers.anthropic_provider:1 of
+msgid "Anthropic provider implementation for the GitHub Repository SEO Optimizer."
+msgstr ""
+
+#: llm_providers.anthropic_provider:3 of
+msgid ""
+"This module provides an implementation of the BaseProvider interface that"
+" uses the Anthropic API to generate content."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider:1 of
+msgid "Anthropic provider implementation that uses the Anthropic API."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider:3 of
+msgid ""
+"This provider requires an Anthropic API key to be set in the "
+"ANTHROPIC_API_KEY environment variable."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.__init__:1 of
+msgid "Initialize the Anthropic provider."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.__init__:3 of
+msgid ""
+"The Anthropic API key, or None to use the ANTHROPIC_API_KEY environment "
+"variable."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.__init__:4 of
+msgid "The Anthropic model to use."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.generate_description:1 of
+msgid "Generate a description for a repository using the Anthropic API."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.generate_topics:1 of
+msgid "Generate topics for a repository using the Anthropic API."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.analyze_readme:1 of
+msgid "Analyze the content of a README file using the Anthropic API."
+msgstr ""
+
+#: llm_providers.anthropic_provider.AnthropicProvider.generate_readme:1 of
+msgid "Generate a README file for a repository using the Anthropic API."
+msgstr ""
+
+#: ../../api/llm_providers.rst:31
+msgid "Local Provider"
+msgstr ""
+
+#: llm_providers.local_provider:1 of
+msgid "Local provider implementation for the GitHub Repository SEO Optimizer."
+msgstr ""
+
+#: llm_providers.local_provider:3 of
+msgid ""
+"This module provides a rule-based implementation of the BaseProvider "
+"interface that doesn't require any external API keys."
+msgstr ""
+
+#: llm_providers.local_provider.LocalProvider:1 of
+msgid "Local provider implementation that uses rule-based approaches."
+msgstr ""
+
+#: llm_providers.local_provider.LocalProvider:3 of
+msgid ""
+"This provider doesn't require any external API keys and uses simple rule-"
+"based approaches to generate content."
+msgstr ""
+
+#: llm_providers.local_provider.LocalProvider.__init__:1 of
+msgid "Initialize the local provider."
+msgstr ""
+
+#: llm_providers.local_provider.LocalProvider.generate_description:1 of
+msgid "Generate a description for a repository using rule-based approaches."
+msgstr ""
+
+#: llm_providers.local_provider.LocalProvider.generate_topics:1 of
+msgid "Generate topics for a repository using rule-based approaches."
+msgstr ""
+
+#: llm_providers.local_provider.LocalProvider.analyze_readme:1 of
+msgid "Analyze the content of a README file using rule-based approaches."
+msgstr ""
+
+#: llm_providers.local_provider.LocalProvider.generate_readme:1 of
+msgid "Generate a README file for a repository using rule-based approaches."
+msgstr ""
+
+#: ../../api/llm_providers.rst:39
+msgid "Ollama Provider"
+msgstr ""
+
+#: llm_providers.ollama_provider:1 of
+msgid "Ollama Language Model Provider for GitHub SEO Optimizer"
+msgstr ""
+
+#: llm_providers.ollama_provider:3 of
+msgid "This provider allows using local language models through Ollama."
+msgstr ""
+
+#: llm_providers.deepseek_provider.DeepSeekProvider:1
+#: llm_providers.ollama_provider.OllamaProvider:1
+#: llm_providers.qianwen_provider.QianwenProvider:1
+#: llm_providers.zhipu_provider.ZhipuProvider:1 of
+msgid "Bases: :py:class:`~llm_providers.LLMProvider`"
+msgstr ""
+
+#: llm_providers.ollama_provider.OllamaProvider:1 of
+msgid "Ollama language model provider for local LLMs."
+msgstr ""
+
+#: llm_providers.ollama_provider.OllamaProvider.__init__:1 of
+msgid "Initialize the Ollama provider."
+msgstr ""
+
+#: llm_providers.ollama_provider.OllamaProvider.__init__:3 of
+msgid "Base URL for the Ollama API. Default is \"http://localhost:11434\"."
+msgstr ""
+
+#: llm_providers.ollama_provider.OllamaProvider.__init__:4 of
+msgid "Model to use for generation. Default is \"mistral:latest\"."
+msgstr ""
+
+#: llm_providers.ollama_provider.OllamaProvider.__init__:5 of
+msgid "Additional arguments to pass to the Ollama API."
+msgstr ""
+
+#: llm_providers.deepseek_provider.DeepSeekProvider.generate_description:1
+#: llm_providers.ollama_provider.OllamaProvider.generate_description:1
+#: llm_providers.qianwen_provider.QianwenProvider.generate_description:1
+#: llm_providers.zhipu_provider.ZhipuProvider.generate_description:1 of
+msgid "Generate an SEO-friendly description for a repository."
+msgstr ""
+
+#: llm_providers.deepseek_provider.DeepSeekProvider.generate_description:3
+#: llm_providers.deepseek_provider.DeepSeekProvider.generate_topics:3
+#: llm_providers.ollama_provider.OllamaProvider.generate_description:3
+#: llm_providers.ollama_provider.OllamaProvider.generate_topics:3
+#: llm_providers.qianwen_provider.QianwenProvider.generate_description:3
+#: llm_providers.qianwen_provider.QianwenProvider.generate_topics:3
+#: llm_providers.zhipu_provider.ZhipuProvider.generate_description:3
+#: llm_providers.zhipu_provider.ZhipuProvider.generate_topics:3 of
+msgid "Name of the repository."
+msgstr ""
+
+#: llm_providers.deepseek_provider.DeepSeekProvider.generate_description:5
+#: llm_providers.deepseek_provider.DeepSeekProvider.generate_topics:5
+#: llm_providers.ollama_provider.OllamaProvider.generate_description:5
+#: llm_providers.ollama_provider.OllamaProvider.generate_topics:5
+#: llm_providers.qianwen_provider.QianwenProvider.generate_description:5
+#: llm_providers.qianwen_provider.QianwenProvider.generate_topics:5
+#: llm_providers.zhipu_provider.ZhipuProvider.generate_description:5
+#: llm_providers.zhipu_provider.ZhipuProvider.generate_topics:5 of
+msgid "List of current repository topics."
+msgstr ""
+
+#: llm_providers.deepseek_provider.DeepSeekProvider.analyze_readme:3
+#: llm_providers.deepseek_provider.DeepSeekProvider.generate_description:6
+#: llm_providers.deepseek_provider.DeepSeekProvider.generate_topics:6
+#: llm_providers.ollama_provider.OllamaProvider.analyze_readme:3
+#: llm_providers.ollama_provider.OllamaProvider.generate_description:6
+#: llm_providers.ollama_provider.OllamaProvider.generate_topics:6
+#: llm_providers.qianwen_provider.QianwenProvider.analyze_readme:3
+#: llm_providers.qianwen_provider.QianwenProvider.generate_description:6
+#: llm_providers.qianwen_provider.QianwenProvider.generate_topics:6
+#: llm_providers.zhipu_provider.ZhipuProvider.analyze_readme:3
+#: llm_providers.zhipu_provider.ZhipuProvider.generate_description:6
+#: llm_providers.zhipu_provider.ZhipuProvider.generate_topics:6 of
+msgid "README content."
+msgstr ""
+
+#: llm_providers.deepseek_provider.DeepSeekProvider.generate_description:8
+#: llm_providers.ollama_provider.OllamaProvider.generate_description:8
+#: llm_providers.qianwen_provider.QianwenProvider.generate_description:8
+#: llm_providers.zhipu_provider.ZhipuProvider.generate_description:8 of
+msgid "SEO-friendly description."
+msgstr ""
+
+#: llm_providers.deepseek_provider.DeepSeekProvider.generate_topics:1
+#: llm_providers.ollama_provider.OllamaProvider.generate_topics:1
+#: llm_providers.qianwen_provider.QianwenProvider.generate_topics:1
+#: llm_providers.zhipu_provider.ZhipuProvider.generate_topics:1 of
+msgid "Generate SEO-friendly topics for a repository."
+msgstr ""
+
+#: llm_providers.deepseek_provider.DeepSeekProvider.generate_topics:8
+#: llm_providers.ollama_provider.OllamaProvider.generate_topics:8
+#: llm_providers.qianwen_provider.QianwenProvider.generate_topics:8
+#: llm_providers.zhipu_provider.ZhipuProvider.generate_topics:8 of
+msgid "List of SEO-friendly topics."
+msgstr ""
+
+#: llm_providers.deepseek_provider.DeepSeekProvider.analyze_readme:1
+#: llm_providers.ollama_provider.OllamaProvider.analyze_readme:1
+#: llm_providers.qianwen_provider.QianwenProvider.analyze_readme:1
+#: llm_providers.zhipu_provider.ZhipuProvider.analyze_readme:1 of
+msgid "Analyze README content to extract summary, topics, and named entities."
+msgstr ""
+
+#: llm_providers.deepseek_provider.DeepSeekProvider.analyze_readme:5
+#: llm_providers.ollama_provider.OllamaProvider.analyze_readme:5
+#: llm_providers.qianwen_provider.QianwenProvider.analyze_readme:5
+#: llm_providers.zhipu_provider.ZhipuProvider.analyze_readme:5 of
+msgid "Dictionary containing summary, topics, and named entities."
+msgstr ""
+
+#: ../../api/llm_providers.rst:47
+msgid "Gemini Provider"
+msgstr ""
+
+#: llm_providers.gemini_provider:1 of
+msgid ""
+"Google Gemini provider implementation for the GitHub Repository SEO "
+"Optimizer."
+msgstr ""
+
+#: llm_providers.gemini_provider:3 of
+msgid ""
+"This module provides an implementation of the BaseProvider interface that"
+" uses the Google Gemini API to generate content."
+msgstr ""
+
+#: llm_providers.gemini_provider.GeminiProvider:1 of
+msgid "Google Gemini provider implementation that uses the Google Gemini API."
+msgstr ""
+
+#: llm_providers.gemini_provider.GeminiProvider:3 of
+msgid ""
+"This provider requires a Google API key to be set in the GOOGLE_API_KEY "
+"or GEMINI_API_KEY environment variable."
+msgstr ""
+
+#: llm_providers.gemini_provider.GeminiProvider.__init__:1 of
+msgid "Initialize the Google Gemini provider."
+msgstr ""
+
+#: llm_providers.gemini_provider.GeminiProvider.__init__:3 of
+msgid ""
+"The Google API key, or None to use the GOOGLE_API_KEY or GEMINI_API_KEY "
+"environment variable."
+msgstr ""
+
+#: llm_providers.gemini_provider.GeminiProvider.__init__:4 of
+msgid "The Google Gemini model to use."
+msgstr ""
+
+#: llm_providers.gemini_provider.GeminiProvider.generate_description:1 of
+msgid "Generate a description for a repository using the Google Gemini API."
+msgstr ""
+
+#: llm_providers.gemini_provider.GeminiProvider.generate_topics:1 of
+msgid "Generate topics for a repository using the Google Gemini API."
+msgstr ""
+
+#: llm_providers.gemini_provider.GeminiProvider.analyze_readme:1 of
+msgid "Analyze the content of a README file using the Google Gemini API."
+msgstr ""
+
+#: llm_providers.gemini_provider.GeminiProvider.generate_readme:1 of
+msgid "Generate a README file for a repository using the Google Gemini API."
+msgstr ""
+
+#: ../../api/llm_providers.rst:55
+msgid "DeepSeek Provider"
+msgstr ""
+
+#: llm_providers.deepseek_provider:1 of
+msgid "DeepSeek Language Model Provider for GitHub SEO Optimizer"
+msgstr ""
+
+#: llm_providers.deepseek_provider:3 of
+msgid "This provider allows using DeepSeek's models."
+msgstr ""
+
+#: llm_providers.deepseek_provider.DeepSeekProvider:1 of
+msgid "DeepSeek language model provider."
+msgstr ""
+
+#: llm_providers.deepseek_provider.DeepSeekProvider.__init__:1 of
+msgid "Initialize the DeepSeek provider."
+msgstr ""
+
+#: llm_providers.deepseek_provider.DeepSeekProvider.__init__:3 of
+msgid "DeepSeek API key. If not provided, will try to get from environment."
+msgstr ""
+
+#: llm_providers.deepseek_provider.DeepSeekProvider.__init__:4 of
+msgid "Model to use for generation. Default is \"deepseek-chat\"."
+msgstr ""
+
+#: llm_providers.deepseek_provider.DeepSeekProvider.__init__:5 of
+msgid "Additional arguments to pass to the DeepSeek API."
+msgstr ""
+
+#: ../../api/llm_providers.rst:63
+msgid "ZhiPu Provider"
+msgstr ""
+
+#: llm_providers.zhipu_provider:1 of
+msgid "Zhipu Language Model Provider for GitHub SEO Optimizer"
+msgstr ""
+
+#: llm_providers.zhipu_provider:3 of
+msgid "This provider allows using Zhipu's models."
+msgstr ""
+
+#: llm_providers.zhipu_provider.ZhipuProvider:1 of
+msgid "Zhipu language model provider."
+msgstr ""
+
+#: llm_providers.zhipu_provider.ZhipuProvider.__init__:1 of
+msgid "Initialize the Zhipu provider."
+msgstr ""
+
+#: llm_providers.zhipu_provider.ZhipuProvider.__init__:3 of
+msgid "Zhipu API key. If not provided, will try to get from environment."
+msgstr ""
+
+#: llm_providers.zhipu_provider.ZhipuProvider.__init__:4 of
+msgid "Model to use for generation. Default is \"chatglm_turbo\"."
+msgstr ""
+
+#: llm_providers.zhipu_provider.ZhipuProvider.__init__:5 of
+msgid "Additional arguments to pass to the Zhipu API."
+msgstr ""
+
+#: ../../api/llm_providers.rst:71
+msgid "QianWen Provider"
+msgstr ""
+
+#: llm_providers.qianwen_provider:1 of
+msgid "Qianwen Language Model Provider for GitHub SEO Optimizer"
+msgstr ""
+
+#: llm_providers.qianwen_provider:3 of
+msgid "This provider allows using Alibaba Cloud's Qianwen models."
+msgstr ""
+
+#: llm_providers.qianwen_provider.QianwenProvider:1 of
+msgid "Qianwen language model provider."
+msgstr ""
+
+#: llm_providers.qianwen_provider.QianwenProvider.__init__:1 of
+msgid "Initialize the Qianwen provider."
+msgstr ""
+
+#: llm_providers.qianwen_provider.QianwenProvider.__init__:3 of
+msgid "Qianwen API key. If not provided, will try to get from environment."
+msgstr ""
+
+#: llm_providers.qianwen_provider.QianwenProvider.__init__:4 of
+msgid "Model to use for generation. Default is \"qwen-turbo\"."
+msgstr ""
+
+#: llm_providers.qianwen_provider.QianwenProvider.__init__:5 of
+msgid "Additional arguments to pass to the Qianwen API."
+msgstr ""
+
+#: ../../api/llm_providers.rst:79
+msgid "Provider Factory"
+msgstr ""
+

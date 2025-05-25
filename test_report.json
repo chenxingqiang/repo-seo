@@ -1,0 +1,53 @@
+{
+  "total_tests": 9,
+  "passed": 7,
+  "failed": 2,
+  "success_rate": "77.8%",
+  "details": [
+    {
+      "name": "版本信息",
+      "success": true,
+      "output": "repo-seo, version 0.1.0"
+    },
+    {
+      "name": "列出LLM提供商",
+      "success": true,
+      "output": "🤖 Available LLM Providers:\n  • local: Local rule-based provider (no API key required)\n  • openai: Op..."
+    },
+    {
+      "name": "主帮助信息",
+      "success": true,
+      "output": "显示了所有可用命令"
+    },
+    {
+      "name": "analyze 帮助信息",
+      "success": true,
+      "output": "显示了 analyze 命令的选项"
+    },
+    {
+      "name": "optimize 帮助信息",
+      "success": true,
+      "output": "显示了 optimize 命令的选项"
+    },
+    {
+      "name": "batch 帮助信息",
+      "success": true,
+      "output": "显示了 batch 命令的选项"
+    },
+    {
+      "name": "sync 帮助信息",
+      "success": true,
+      "output": "显示了 sync 命令的选项"
+    },
+    {
+      "name": "模块导入",
+      "success": false,
+      "output": "cannot import name 'RepositoryOptimizer' from 'repo_seo.main' (/Users/xingqiangchen/repo-seo/repo_seo/main.py)"
+    },
+    {
+      "name": "Local Provider 功能",
+      "success": false,
+      "output": "'local'"
+    }
+  ]
+}

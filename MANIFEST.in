@@ -1,0 +1,16 @@
+include README.md
+include LICENSE
+include requirements.txt
+include pyproject.toml
+recursive-include repo_seo *.py
+recursive-include repo_seo/data *.json
+recursive-include repo_seo/templates *.txt
+recursive-include docs *.md
+recursive-include examples *.py *.md
+exclude temp_files/*
+exclude tests/*
+exclude .pytest_cache/*
+exclude *.pyc
+exclude __pycache__/*
+global-exclude *.pyc
+global-exclude __pycache__/* 

@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Chen Xingqiang
+# This file is distributed under the same license as the GitHub Repository
+# SEO Optimizer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GitHub Repository SEO Optimizer 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-25 18:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../api/github_client.rst:2
+msgid "GitHub Client API"
+msgstr ""
+
+#: ../../api/github_client.rst:4
+msgid ""
+"This module provides the interface for interacting with GitHub "
+"repositories."
+msgstr ""
+
+#: ../../api/github_client.rst:7
+msgid "GitHubClient Class"
+msgstr ""
+
+#: ../../api/github_client.rst:15
+msgid "Repository Model"
+msgstr ""
+
+#: ../../api/github_client.rst:23
+msgid "Exceptions"
+msgstr ""
+
+#: ../../api/github_client.rst:31
+msgid "Usage Examples"
+msgstr ""
+
+#: ../../api/github_client.rst:34
+msgid "Basic Usage"
+msgstr ""
+
+#: ../../api/github_client.rst:55
+msgid "Batch Operations"
+msgstr ""
+

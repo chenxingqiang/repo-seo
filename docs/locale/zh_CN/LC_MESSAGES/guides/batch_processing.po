@@ -1,0 +1,311 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Chen Xingqiang
+# This file is distributed under the same license as the GitHub Repository
+# SEO Optimizer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GitHub Repository SEO Optimizer 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-25 18:23+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../guides/batch_processing.rst:2
+msgid "Batch Processing Guide"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:4
+msgid ""
+"This guide covers how to efficiently process multiple GitHub repositories"
+" using the SEO Optimizer."
+msgstr ""
+
+#: ../../guides/batch_processing.rst:7
+msgid "Overview"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:9
+msgid ""
+"Batch processing allows you to optimize multiple repositories at once, "
+"saving time and ensuring consistency across your GitHub profile or "
+"organization."
+msgstr ""
+
+#: ../../guides/batch_processing.rst:12
+msgid "Basic Batch Processing"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:15
+msgid "Simple Batch Operations"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:17
+msgid "Process all repositories for a user:"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:31
+msgid "Filtering Options"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:33
+msgid "Target specific types of repositories:"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:50
+msgid "Advanced Batch Processing"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:53
+msgid "Processing by Language"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:55
+msgid "Optimize repositories based on their primary language:"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:69
+msgid "Processing Organizations"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:71
+msgid "Process repositories for an entire organization:"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:85
+msgid "Batch Configuration"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:88
+msgid "Configuration File"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:90
+msgid "Create a batch configuration file (``batch_config.yaml``):"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:133
+msgid "Using the configuration:"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:140
+msgid "Parallel Processing"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:142
+msgid "Enable parallel processing for faster execution:"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:153
+msgid "Progress Tracking"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:156
+msgid "Real-time Progress"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:158
+msgid "Monitor batch processing progress:"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:172
+msgid "Resume Interrupted Batches"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:174
+msgid "Resume processing from where it stopped:"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:185
+msgid "Batch Results"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:188
+msgid "Output Formats"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:190
+msgid "Choose how to save batch results:"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:207
+msgid "Result Analysis"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:209
+msgid "Analyze batch processing results:"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:233
+msgid "Error Handling"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:236
+msgid "Handling Failures"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:238
+msgid "Configure how to handle errors during batch processing:"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:252
+msgid "Error Logging"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:254
+msgid "Detailed error logging for troubleshooting:"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:265
+msgid "Rate Limiting"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:267
+msgid "Handle API rate limits gracefully:"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:281
+msgid "Performance Optimization"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:284
+msgid "Caching"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:286
+msgid "Enable caching to avoid redundant API calls:"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:300
+msgid "Batch Strategies"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:302
+msgid "Different strategies for different scenarios:"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:304
+msgid "**Quick Scan Strategy**"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:306
+msgid "For initial assessment:"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:316
+msgid "**Quality Optimization Strategy**"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:318
+msgid "For important repositories:"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:328
+msgid "**Incremental Updates Strategy**"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:330
+msgid "For regular maintenance:"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:340
+msgid "Automation"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:343
+msgid "Scheduled Batch Processing"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:345
+msgid "Set up automated batch processing:"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:347
+msgid "**Using cron (Linux/macOS):**"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:354
+msgid "**Using Task Scheduler (Windows):**"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:356
+msgid "Create a scheduled task to run the batch process."
+msgstr ""
+
+#: ../../guides/batch_processing.rst:358
+msgid "**Using GitHub Actions:**"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:387
+msgid "Best Practices"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:389
+msgid "**Start Small**: Test with a few repositories before processing all"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:390
+msgid "**Use Dry Run**: Always preview changes with ``--dry-run`` first"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:391
+msgid "**Monitor Progress**: Use progress tracking for large batches"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:392
+msgid "**Handle Errors**: Implement proper error handling and logging"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:393
+msgid "**Respect Rate Limits**: Use delays and rate limit handling"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:394
+msgid "**Cache Results**: Enable caching to reduce API calls"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:395
+msgid "**Regular Updates**: Schedule regular batch updates"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:396
+msgid "**Backup First**: Consider backing up repository metadata"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:399
+msgid "Example Workflows"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:402
+msgid "Initial Organization Setup"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:416
+msgid "Monthly Maintenance"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:430
+msgid "Next Steps"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:432
+msgid "Learn about :doc:`/api/modules` for programmatic batch processing"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:433
+msgid "Explore :doc:`llm_providers` for provider-specific batch features"
+msgstr ""
+
+#: ../../guides/batch_processing.rst:434
+msgid "Read about :doc:`/development/architecture` for custom batch strategies"
+msgstr ""
+

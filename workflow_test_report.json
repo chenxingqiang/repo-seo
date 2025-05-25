@@ -1,0 +1,53 @@
+{
+  "total": 9,
+  "passed": 4,
+  "failed": 5,
+  "success_rate": "44.4%",
+  "results": [
+    {
+      "name": "包安装检查",
+      "success": true,
+      "message": "包已正确安装"
+    },
+    {
+      "name": "命令行工具",
+      "success": true,
+      "message": "repo-seo, version 0.1.0"
+    },
+    {
+      "name": "模块导入",
+      "success": false,
+      "message": ""
+    },
+    {
+      "name": "创建测试仓库",
+      "success": true,
+      "message": "测试仓库创建于 /var/folders/zv/xnstggzd6rsdrc5xk2bcfhn40000gn/T/tmpn6m1yx6f/test_repo"
+    },
+    {
+      "name": "Analyze 功能",
+      "success": false,
+      "message": "transformers 依赖问题"
+    },
+    {
+      "name": "Providers 列表",
+      "success": true,
+      "message": "找到 8 个提供商"
+    },
+    {
+      "name": "本地 AI 客户端",
+      "success": false,
+      "message": ""
+    },
+    {
+      "name": "批处理初始化",
+      "success": false,
+      "message": ""
+    },
+    {
+      "name": "同步功能初始化",
+      "success": false,
+      "message": ""
+    }
+  ]
+}

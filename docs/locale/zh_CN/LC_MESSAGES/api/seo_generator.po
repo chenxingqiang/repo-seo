@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Chen Xingqiang
+# This file is distributed under the same license as the GitHub Repository
+# SEO Optimizer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GitHub Repository SEO Optimizer 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-25 18:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../api/seo_generator.rst:2
+msgid "SEO Generator API"
+msgstr ""
+
+#: ../../api/seo_generator.rst:4
+msgid ""
+"This module handles the generation of SEO-optimized content for "
+"repositories."
+msgstr ""
+
+#: ../../api/seo_generator.rst:7
+msgid "SEOGenerator Class"
+msgstr ""
+
+#: ../../api/seo_generator.rst:15
+msgid "SEO Models"
+msgstr ""
+
+#: ../../api/seo_generator.rst:23
+msgid "Optimization Strategies"
+msgstr ""
+
+#: ../../api/seo_generator.rst:31
+msgid "Usage Examples"
+msgstr ""
+
+#: ../../api/seo_generator.rst:34
+msgid "Basic SEO Generation"
+msgstr ""
+
+#: ../../api/seo_generator.rst:58
+msgid "Custom Strategies"
+msgstr ""
+

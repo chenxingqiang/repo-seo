@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Chen Xingqiang
+# This file is distributed under the same license as the GitHub Repository
+# SEO Optimizer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GitHub Repository SEO Optimizer 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-25 18:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../development/testing.rst:2
+msgid "Testing Guide"
+msgstr ""
+
+#: ../../development/testing.rst:4
+msgid ""
+"This guide covers testing practices for the GitHub Repository SEO "
+"Optimizer project."
+msgstr ""
+
+#: ../../development/testing.rst:7
+msgid "Test Structure"
+msgstr ""
+
+#: ../../development/testing.rst:9
+msgid "The test suite is organized as follows:"
+msgstr ""
+
+#: ../../development/testing.rst:26
+msgid "Running Tests"
+msgstr ""
+
+#: ../../development/testing.rst:29
+msgid "Basic Commands"
+msgstr ""
+
+#: ../../development/testing.rst:46
+msgid "Coverage Reports"
+msgstr ""
+
+#: ../../development/testing.rst:60
+msgid "Test Categories"
+msgstr ""
+
+#: ../../development/testing.rst:62
+msgid "Run specific categories of tests:"
+msgstr ""
+
+#: ../../development/testing.rst:79
+msgid "Writing Tests"
+msgstr ""
+
+#: ../../development/testing.rst:82
+msgid "Unit Tests"
+msgstr ""
+
+#: ../../development/testing.rst:84
+msgid "Example unit test:"
+msgstr ""
+
+#: ../../development/testing.rst:127
+msgid "Integration Tests"
+msgstr ""
+
+#: ../../development/testing.rst:129
+msgid "Example integration test:"
+msgstr ""
+
+#: ../../development/testing.rst:162
+msgid "Test Fixtures"
+msgstr ""
+
+#: ../../development/testing.rst:164
+msgid "Common fixtures in ``conftest.py``:"
+msgstr ""
+
+#: ../../development/testing.rst:202
+msgid "Mocking External Services"
+msgstr ""
+
+#: ../../development/testing.rst:205
+msgid "GitHub API"
+msgstr ""
+
+#: ../../development/testing.rst:225
+msgid "LLM Providers"
+msgstr ""
+
+#: ../../development/testing.rst:242
+msgid "Test Markers"
+msgstr ""
+
+#: ../../development/testing.rst:244
+msgid "Available markers:"
+msgstr ""
+
+#: ../../development/testing.rst:274
+msgid "Performance Testing"
+msgstr ""
+
+#: ../../development/testing.rst:277
+msgid "Benchmark Tests"
+msgstr ""
+
+#: ../../development/testing.rst:294
+msgid "Load Testing"
+msgstr ""
+
+#: ../../development/testing.rst:310
+msgid "Debugging Tests"
+msgstr ""
+
+#: ../../development/testing.rst:312
+msgid "Useful debugging techniques:"
+msgstr ""
+
+#: ../../development/testing.rst:332
+msgid "Continuous Integration"
+msgstr ""
+
+#: ../../development/testing.rst:334
+msgid "GitHub Actions configuration:"
+msgstr ""
+
+#: ../../development/testing.rst:365
+msgid "Best Practices"
+msgstr ""
+
+#: ../../development/testing.rst:367
+msgid "**Test Independence**: Each test should be independent"
+msgstr ""
+
+#: ../../development/testing.rst:368
+msgid "**Clear Names**: Use descriptive test names"
+msgstr ""
+
+#: ../../development/testing.rst:369
+msgid "**Arrange-Act-Assert**: Follow AAA pattern"
+msgstr ""
+
+#: ../../development/testing.rst:370
+msgid "**Mock External Services**: Don't make real API calls"
+msgstr ""
+
+#: ../../development/testing.rst:371
+msgid "**Test Edge Cases**: Include boundary conditions"
+msgstr ""
+
+#: ../../development/testing.rst:372
+msgid "**Keep Tests Fast**: Mock slow operations"
+msgstr ""
+
+#: ../../development/testing.rst:373
+msgid "**Use Fixtures**: Share common setup code"
+msgstr ""
+
+#: ../../development/testing.rst:374
+msgid "**Test One Thing**: Each test should verify one behavior"
+msgstr ""
+

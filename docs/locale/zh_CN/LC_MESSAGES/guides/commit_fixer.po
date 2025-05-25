@@ -1,0 +1,520 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Chen Xingqiang
+# This file is distributed under the same license as the GitHub Repository
+# SEO Optimizer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GitHub Repository SEO Optimizer 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-25 18:23+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../guides/commit_fixer.rst:2
+msgid "Commit Message Fixer Guide"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:4
+msgid ""
+"This guide explains how to use the Commit Message Fixer to automatically "
+"format your Git commit messages according to the Conventional Commits "
+"standard."
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:7
+msgid "Overview"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:9
+msgid ""
+"The Commit Message Fixer is a Git hook that automatically formats your "
+"commit messages to follow the `Conventional Commits "
+"<https://www.conventionalcommits.org/>`_ specification, ensuring "
+"consistent and meaningful commit history."
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:12
+msgid "Installation"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:15
+msgid "Quick Setup"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:17
+msgid "Run the setup script to install the commit hook:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:23
+msgid "This will:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:25
+msgid "Make the commit message fixer script executable"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:26
+msgid "Install it as a Git commit-msg hook"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:27
+msgid "Configure it to run automatically on every commit"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:30
+msgid "Manual Setup"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:32
+msgid "If you prefer manual installation:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:43
+msgid "Commit Message Format"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:45
+msgid "The Conventional Commits format follows this structure:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:56
+msgid "Types"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:58
+msgid "The following types are supported:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:60
+msgid "Commit Types"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:64
+msgid "Type"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:65
+msgid "Description"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:66
+msgid "``feat``"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:67
+msgid "A new feature"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:68
+msgid "``fix``"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:69
+msgid "A bug fix"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:70 ../../guides/commit_fixer.rst:174
+msgid "``docs``"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:71
+msgid "Documentation only changes"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:72 ../../guides/commit_fixer.rst:176
+msgid "``style``"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:73
+msgid "Changes that don't affect code meaning (whitespace, formatting)"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:74
+msgid "``refactor``"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:75
+msgid "Code changes that neither fix bugs nor add features"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:76
+msgid "``perf``"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:77
+msgid "Code changes that improve performance"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:78 ../../guides/commit_fixer.rst:172
+msgid "``test``"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:79
+msgid "Adding or correcting tests"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:80 ../../guides/commit_fixer.rst:178
+#: ../../guides/commit_fixer.rst:182
+msgid "``build``"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:81
+msgid "Changes to build system or dependencies"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:82 ../../guides/commit_fixer.rst:180
+msgid "``ci``"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:83
+msgid "Changes to CI configuration files and scripts"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:84
+msgid "``chore``"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:85
+msgid "Other changes that don't modify src or test files"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:86
+msgid "``revert``"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:87
+msgid "Reverts a previous commit"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:90
+msgid "Examples"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:92
+msgid "Good commit messages:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:107
+msgid "Usage Examples"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:110
+msgid "Basic Usage"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:112
+msgid "Simply commit as usual, and the hook will format your message:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:123
+msgid "With Scope"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:125
+msgid "Include a scope to specify the affected area:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:136
+msgid "Multi-line Messages"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:138
+msgid "For detailed commits with body:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:144
+msgid "Then in your editor:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:158
+msgid "Smart Type Detection"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:160
+msgid "The fixer automatically suggests commit types based on file changes:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:163
+msgid "File-based Detection"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:165
+msgid "Auto-detection Rules"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:169
+msgid "File Pattern"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:170
+msgid "Suggested Type"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:171
+msgid "``test_*.py``, ``*_test.py``, ``*.test.js``"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:173
+msgid "``README*``, ``*.md``, ``docs/*``"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:175
+msgid "``*.css``, ``*.scss``, ``*.style.*``"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:177
+msgid "``Dockerfile``, ``docker-compose.yml``"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:179
+msgid "``.github/workflows/*``, ``*.yml`` (CI files)"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:181
+msgid "``package.json``, ``requirements.txt``"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:185
+msgid "Content-based Detection"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:187
+msgid "The fixer also analyzes commit message content:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:201
+msgid "Branch Naming Convention"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:203
+msgid "The tool also validates branch names:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:206
+msgid "Valid Formats"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:212
+msgid "Examples:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:220
+msgid "Invalid branch names will trigger a warning but won't block commits."
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:223
+msgid "Configuration"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:226
+msgid "Custom Configuration"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:228
+msgid "Create a ``.commitlintrc.json`` file in your project root:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:248
+msgid "Disable for Specific Commits"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:250
+msgid "To bypass the hook temporarily:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:257
+msgid "Advanced Features"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:260
+msgid "Emoji Support"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:262
+msgid "Enable emoji prefixes for visual clarity:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:269
+msgid "Result:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:279
+msgid "Jira/Issue Integration"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:281
+msgid "Automatically append issue numbers:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:291
+msgid "Team Conventions"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:293
+msgid "Enforce team-specific rules:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:309
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:312
+msgid "Common Issues"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:314
+msgid "**Hook not running:**"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:324
+msgid "**Python not found:**"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:331
+msgid "**Encoding issues:**"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:333
+msgid "Ensure your Git is configured for UTF-8:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:340
+msgid "Debugging"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:342
+msgid "Enable debug mode for detailed output:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:350
+msgid "Integration with Other Tools"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:353
+msgid "VS Code Integration"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:355
+msgid ""
+"Install the \"Conventional Commits\" extension for VS Code to get commit "
+"message suggestions in the editor."
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:358
+msgid "Pre-commit Framework"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:360
+msgid "Add to ``.pre-commit-config.yaml``:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:374
+msgid "CI/CD Integration"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:376
+msgid "Validate commit messages in CI:"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:386
+msgid "Best Practices"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:388
+msgid "**Be Specific**: Use clear, descriptive messages"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:389
+msgid "**Use Present Tense**: \"add feature\" not \"added feature\""
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:390
+msgid "**Keep It Short**: Subject line under 72 characters"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:391
+msgid "**Reference Issues**: Include issue numbers when applicable"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:392
+msgid "**Group Related Changes**: One commit per logical change"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:393
+msgid "**Use Scope Wisely**: Scope should be a noun describing a section"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:396
+msgid "Examples of Good vs Bad"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:398
+msgid "Commit Message Examples"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:402
+msgid "❌ Bad"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:403
+msgid "✅ Good"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:404
+msgid "\"fix bug\""
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:405
+msgid "\"fix(auth): resolve login timeout issue\""
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:406
+msgid "\"update stuff\""
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:407
+msgid "\"refactor(api): simplify request handling\""
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:408
+msgid "\"WIP\""
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:409
+msgid "\"feat(ui): add user profile page [WIP]\""
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:410
+msgid "\"misc changes\""
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:411
+msgid "\"chore: update dependencies and format code\""
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:414
+msgid "Next Steps"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:416
+msgid "Set up :doc:`/development/contributing` guidelines for your team"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:417
+msgid "Configure :doc:`/guides/batch_processing` to check commit quality"
+msgstr ""
+
+#: ../../guides/commit_fixer.rst:418
+msgid "Learn about :doc:`/api/modules` for programmatic commit analysis"
+msgstr ""
+

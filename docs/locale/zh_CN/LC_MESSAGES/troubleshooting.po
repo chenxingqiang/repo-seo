@@ -1,0 +1,383 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Chen Xingqiang
+# This file is distributed under the same license as the GitHub Repository
+# SEO Optimizer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GitHub Repository SEO Optimizer 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-25 18:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../troubleshooting.rst:2
+msgid "Troubleshooting Guide"
+msgstr ""
+
+#: ../../troubleshooting.rst:4
+msgid ""
+"This guide helps you resolve common issues with the GitHub Repository SEO"
+" Optimizer."
+msgstr ""
+
+#: ../../troubleshooting.rst:7
+msgid "Installation Issues"
+msgstr ""
+
+#: ../../troubleshooting.rst:10
+msgid "pip installation fails"
+msgstr ""
+
+#: ../../troubleshooting.rst:12
+msgid "**Problem**: ``pip install`` command fails with dependency errors."
+msgstr ""
+
+#: ../../troubleshooting.rst:14 ../../troubleshooting.rst:41
+#: ../../troubleshooting.rst:57 ../../troubleshooting.rst:74
+#: ../../troubleshooting.rst:98 ../../troubleshooting.rst:118
+#: ../../troubleshooting.rst:134 ../../troubleshooting.rst:148
+#: ../../troubleshooting.rst:166 ../../troubleshooting.rst:186
+msgid "**Solution**:"
+msgstr ""
+
+#: ../../troubleshooting.rst:16
+msgid "Ensure you have Python 3.8 or higher:"
+msgstr ""
+
+#: ../../troubleshooting.rst:22
+msgid "Upgrade pip:"
+msgstr ""
+
+#: ../../troubleshooting.rst:28
+msgid "Install in a virtual environment:"
+msgstr ""
+
+#: ../../troubleshooting.rst:37
+msgid "GitHub CLI not found"
+msgstr ""
+
+#: ../../troubleshooting.rst:39
+msgid "**Problem**: Error message \"GitHub CLI (gh) not found\"."
+msgstr ""
+
+#: ../../troubleshooting.rst:43
+msgid "Install GitHub CLI based on your operating system:"
+msgstr ""
+
+#: ../../troubleshooting.rst:45
+msgid "**macOS**: ``brew install gh``"
+msgstr ""
+
+#: ../../troubleshooting.rst:46
+msgid "**Windows**: ``winget install --id GitHub.cli``"
+msgstr ""
+
+#: ../../troubleshooting.rst:47
+msgid ""
+"**Linux**: See `GitHub CLI installation guide "
+"<https://github.com/cli/cli/blob/trunk/docs/install_linux.md>`_"
+msgstr ""
+
+#: ../../troubleshooting.rst:50
+msgid "Authentication Issues"
+msgstr ""
+
+#: ../../troubleshooting.rst:53
+msgid "GitHub authentication failed"
+msgstr ""
+
+#: ../../troubleshooting.rst:55
+msgid "**Problem**: \"Authentication failed\" or \"Bad credentials\" error."
+msgstr ""
+
+#: ../../troubleshooting.rst:59
+msgid "Re-authenticate with GitHub CLI:"
+msgstr ""
+
+#: ../../troubleshooting.rst:66
+msgid "Choose the correct authentication method (browser recommended)"
+msgstr ""
+
+#: ../../troubleshooting.rst:67
+msgid "Ensure you have the necessary permissions (repo scope)"
+msgstr ""
+
+#: ../../troubleshooting.rst:70
+msgid "API key not working"
+msgstr ""
+
+#: ../../troubleshooting.rst:72
+msgid "**Problem**: LLM provider returns \"Invalid API key\" error."
+msgstr ""
+
+#: ../../troubleshooting.rst:76
+msgid "Verify the environment variable is set:"
+msgstr ""
+
+#: ../../troubleshooting.rst:82
+msgid "Check the API key is valid in the provider's dashboard"
+msgstr ""
+
+#: ../../troubleshooting.rst:83
+msgid "Ensure no extra spaces or quotes in the key"
+msgstr ""
+
+#: ../../troubleshooting.rst:84
+msgid "Try setting the key directly in the command:"
+msgstr ""
+
+#: ../../troubleshooting.rst:91
+msgid "Runtime Errors"
+msgstr ""
+
+#: ../../troubleshooting.rst:94
+msgid "Rate limit exceeded"
+msgstr ""
+
+#: ../../troubleshooting.rst:96
+msgid "**Problem**: \"API rate limit exceeded\" error from GitHub."
+msgstr ""
+
+#: ../../troubleshooting.rst:100
+msgid "Wait for the rate limit to reset (usually 1 hour)"
+msgstr ""
+
+#: ../../troubleshooting.rst:101
+msgid "Use the ``--delay`` option to slow down requests:"
+msgstr ""
+
+#: ../../troubleshooting.rst:107
+msgid "Process fewer repositories at once:"
+msgstr ""
+
+#: ../../troubleshooting.rst:114
+msgid "No changes detected"
+msgstr ""
+
+#: ../../troubleshooting.rst:116
+msgid "**Problem**: Tool runs but doesn't make any changes."
+msgstr ""
+
+#: ../../troubleshooting.rst:120
+msgid "Check if repositories already have good descriptions and topics"
+msgstr ""
+
+#: ../../troubleshooting.rst:121
+msgid "Try a different LLM provider for better results"
+msgstr ""
+
+#: ../../troubleshooting.rst:122
+msgid "Use ``--force`` to regenerate even if content exists"
+msgstr ""
+
+#: ../../troubleshooting.rst:123
+msgid "Check the dry-run output:"
+msgstr ""
+
+#: ../../troubleshooting.rst:130
+msgid "Memory errors with large repositories"
+msgstr ""
+
+#: ../../troubleshooting.rst:132
+msgid "**Problem**: \"MemoryError\" when processing large repositories."
+msgstr ""
+
+#: ../../troubleshooting.rst:136
+msgid "Limit the README content size in configuration"
+msgstr ""
+
+#: ../../troubleshooting.rst:137
+msgid "Process repositories individually instead of batch"
+msgstr ""
+
+#: ../../troubleshooting.rst:138
+msgid "Use a provider with smaller context requirements (e.g., local provider)"
+msgstr ""
+
+#: ../../troubleshooting.rst:141
+msgid "Provider-Specific Issues"
+msgstr ""
+
+#: ../../troubleshooting.rst:144
+msgid "OpenAI timeout errors"
+msgstr ""
+
+#: ../../troubleshooting.rst:146
+msgid "**Problem**: OpenAI API calls timeout."
+msgstr ""
+
+#: ../../troubleshooting.rst:150
+msgid "Increase timeout in configuration:"
+msgstr ""
+
+#: ../../troubleshooting.rst:158
+msgid "Use a faster model (gpt-3.5-turbo instead of gpt-4)"
+msgstr ""
+
+#: ../../troubleshooting.rst:159
+msgid "Reduce the amount of context sent"
+msgstr ""
+
+#: ../../troubleshooting.rst:162
+msgid "Ollama connection refused"
+msgstr ""
+
+#: ../../troubleshooting.rst:164
+msgid "**Problem**: \"Connection refused\" when using Ollama."
+msgstr ""
+
+#: ../../troubleshooting.rst:168
+msgid "Ensure Ollama is running:"
+msgstr ""
+
+#: ../../troubleshooting.rst:174
+msgid "Check Ollama is listening on the correct port (default: 11434)"
+msgstr ""
+
+#: ../../troubleshooting.rst:175
+msgid "Pull the required model:"
+msgstr ""
+
+#: ../../troubleshooting.rst:182
+msgid "Local provider poor quality"
+msgstr ""
+
+#: ../../troubleshooting.rst:184
+msgid "**Problem**: Local provider generates low-quality descriptions."
+msgstr ""
+
+#: ../../troubleshooting.rst:188
+msgid "Use local provider for initial filtering only"
+msgstr ""
+
+#: ../../troubleshooting.rst:189
+msgid "Switch to an AI provider for important repositories"
+msgstr ""
+
+#: ../../troubleshooting.rst:190
+msgid "Customize the local provider templates"
+msgstr ""
+
+#: ../../troubleshooting.rst:193
+msgid "Common Error Messages"
+msgstr ""
+
+#: ../../troubleshooting.rst:196
+msgid "\"Repository not found\""
+msgstr ""
+
+#: ../../troubleshooting.rst:198 ../../troubleshooting.rst:209
+#: ../../troubleshooting.rst:220
+msgid "**Causes**:"
+msgstr ""
+
+#: ../../troubleshooting.rst:200
+msgid "Repository name is misspelled"
+msgstr ""
+
+#: ../../troubleshooting.rst:201
+msgid "Repository is private and you lack access"
+msgstr ""
+
+#: ../../troubleshooting.rst:202
+msgid "Repository was deleted or renamed"
+msgstr ""
+
+#: ../../troubleshooting.rst:204
+msgid "**Solution**: Verify the repository exists and you have access."
+msgstr ""
+
+#: ../../troubleshooting.rst:207
+msgid "\"Insufficient permissions\""
+msgstr ""
+
+#: ../../troubleshooting.rst:211
+msgid "GitHub token lacks necessary scopes"
+msgstr ""
+
+#: ../../troubleshooting.rst:212
+msgid "You're not the repository owner"
+msgstr ""
+
+#: ../../troubleshooting.rst:213
+msgid "Organization restrictions"
+msgstr ""
+
+#: ../../troubleshooting.rst:215
+msgid "**Solution**: Ensure your GitHub authentication has ``repo`` scope."
+msgstr ""
+
+#: ../../troubleshooting.rst:218
+msgid "\"Invalid configuration\""
+msgstr ""
+
+#: ../../troubleshooting.rst:222
+msgid "Syntax error in YAML configuration file"
+msgstr ""
+
+#: ../../troubleshooting.rst:223
+msgid "Invalid provider name"
+msgstr ""
+
+#: ../../troubleshooting.rst:224
+msgid "Missing required fields"
+msgstr ""
+
+#: ../../troubleshooting.rst:226
+msgid ""
+"**Solution**: Validate your configuration file and check the "
+"documentation."
+msgstr ""
+
+#: ../../troubleshooting.rst:229
+msgid "Getting Help"
+msgstr ""
+
+#: ../../troubleshooting.rst:231
+msgid "If you're still experiencing issues:"
+msgstr ""
+
+#: ../../troubleshooting.rst:233
+msgid ""
+"Check the `GitHub Issues <https://github.com/chenxingqiang/repo-"
+"seo/issues>`_"
+msgstr ""
+
+#: ../../troubleshooting.rst:234
+msgid "Enable debug logging:"
+msgstr ""
+
+#: ../../troubleshooting.rst:240
+msgid "Create a new issue with:"
+msgstr ""
+
+#: ../../troubleshooting.rst:242
+msgid "Your Python version"
+msgstr ""
+
+#: ../../troubleshooting.rst:243
+msgid "Operating system"
+msgstr ""
+
+#: ../../troubleshooting.rst:244
+msgid "Complete error message"
+msgstr ""
+
+#: ../../troubleshooting.rst:245
+msgid "Steps to reproduce"
+msgstr ""
+
+#: ../../troubleshooting.rst:247
+msgid "Join our community discussions for help"
+msgstr ""
+

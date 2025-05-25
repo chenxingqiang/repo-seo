@@ -1,282 +1,228 @@
 #!/usr/bin/env python3
+"""
+Command-line interface for the GitHub Repository SEO Optimizer.
+
+This module provides a command-line interface for optimizing GitHub repositories,
+including commands for optimizing repositories, setting up commit hooks, and more.
+"""
+
 import os
 import sys
-import argparse
 import logging
-from datetime import datetime
-from typing import List, Optional, Dict, Any
+import argparse
+from typing import Dict, List, Any, Optional
 
-from repo_manager import RepoManager
+from .main import RepositoryOptimizer
+from .llm_providers import list_available_providers, check_provider_api_key
+from .utils.common import is_github_cli_installed, is_github_cli_authenticated
 
-# 设置日志
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
+# Configure logging
 logger = logging.getLogger(__name__)
 
-def create_parser() -> argparse.ArgumentParser:
-    """创建命令行参数解析器"""
-    parser = argparse.ArgumentParser(description='Git仓库管理工具')
-    subparsers = parser.add_subparsers(dest='command', help='可用命令')
 
-    # 创建分支
-    branch_parser = subparsers.add_parser('branch', help='分支操作')
-    branch_parser.add_argument('name', help='分支名称')
-    branch_parser.add_argument('--base', default='main', help='基础分支名称')
-
-    # 提交更改
-    commit_parser = subparsers.add_parser('commit', help='提交更改')
-    commit_parser.add_argument('message', help='提交信息')
-    commit_parser.add_argument('--files', nargs='*', help='要提交的文件列表')
-
-    # 推送更改
-    push_parser = subparsers.add_parser('push', help='推送更改')
-    push_parser.add_argument('--branch', help='要推送的分支')
-    push_parser.add_argument('--force', action='store_true', help='是否强制推送')
-
-    # 同步仓库
-    sync_parser = subparsers.add_parser('sync', help='同步仓库')
-    sync_parser.add_argument('--branch', help='要同步的分支')
-
-    # 创建标签
-    tag_parser = subparsers.add_parser('tag', help='创建标签')
-    tag_parser.add_argument('name', help='标签名称')
-    tag_parser.add_argument('message', help='标签信息')
-
-    # 查看历史
-    history_parser = subparsers.add_parser('history', help='查看提交历史')
-    history_parser.add_argument('--count', type=int, default=10, help='显示的提交数量')
-
-    # 查看更改
-    changes_parser = subparsers.add_parser('changes', help='查看文件更改')
-    changes_parser.add_argument('--commit', help='提交哈希')
-
-    # 合并分支
-    merge_parser = subparsers.add_parser('merge', help='合并分支')
-    merge_parser.add_argument('source', help='源分支')
-    merge_parser.add_argument('--strategy', choices=['merge', 'rebase'], default='merge', help='合并策略')
-    merge_parser.add_argument('--squash', action='store_true', help='是否压缩提交')
-    merge_parser.add_argument('--abort', action='store_true', help='中止合并')
-    merge_parser.add_argument('--resolve', choices=['ours', 'theirs'], help='解决冲突策略')
-
-    # Cherry-pick
-    cherry_pick_parser = subparsers.add_parser('cherry-pick', help='Cherry-pick提交')
-    cherry_pick_parser.add_argument('commits', nargs='+', help='要cherry-pick的提交哈希列表')
-
-    # 暂存管理
-    stash_parser = subparsers.add_parser('stash', help='暂存管理')
-    stash_subparsers = stash_parser.add_subparsers(dest='stash_command', help='暂存操作')
-
-    # 创建暂存
-    stash_push = stash_subparsers.add_parser('push', help='创建暂存')
-    stash_push.add_argument('--name', help='暂存名称')
-
-    # 恢复暂存
-    stash_pop = stash_subparsers.add_parser('pop', help='恢复暂存')
-    stash_pop.add_argument('--index', type=int, default=0, help='暂存索引')
-
-    # 列出暂存
-    stash_list = stash_subparsers.add_parser('list', help='列出暂存')
-
-    # Hooks command
-    hooks_parser = subparsers.add_parser('hooks', help='Git hooks management')
-    hooks_subparsers = hooks_parser.add_subparsers(dest='hooks_command', help='Hooks commands')
-
-    # List hooks
-    hooks_list_parser = hooks_subparsers.add_parser('list', help='List all hooks')
-
-    # Install hook
-    hooks_install_parser = hooks_subparsers.add_parser('install', help='Install a hook')
-    hooks_install_parser.add_argument('name', help='Hook name')
-    hooks_install_parser.add_argument('file', help='Hook script file')
-
-    # Remove hook
-    hooks_remove_parser = hooks_subparsers.add_parser('remove', help='Remove a hook')
-    hooks_remove_parser.add_argument('name', help='Hook name')
-
-    # Enable hook
-    hooks_enable_parser = hooks_subparsers.add_parser('enable', help='Enable a hook')
-    hooks_enable_parser.add_argument('name', help='Hook name')
-
-    # Disable hook
-    hooks_disable_parser = hooks_subparsers.add_parser('disable', help='Disable a hook')
-    hooks_disable_parser.add_argument('name', help='Hook name')
-
-    return parser
-
-def format_changes(changes: dict) -> str:
-    """格式化文件更改信息"""
-    output = []
-    for status, files in changes.items():
-        if files:
-            output.append(f"\n{status.capitalize()}:")
-            for file in files:
-                output.append(f"  - {file}")
-    return '\n'.join(output) if output else "No changes"
-
-def format_commit_history(commits: List[dict]) -> str:
-    """格式化提交历史信息"""
-    output = []
-    for commit in commits:
-        output.append(f"\nCommit: {commit['hash'][:8]}")
-        output.append(f"Author: {commit['author']}")
-        output.append(f"Date: {commit['date']}")
-        output.append(f"Message: {commit['message']}\n")
-    return '\n'.join(output) if output else "No commits"
-
-def format_stashes(stashes: List[dict]) -> str:
-    """格式化暂存列表信息"""
-    output = []
-    for stash in stashes:
-        output.append(f"\n{stash['ref']} ({stash['hash']})")
-        output.append(f"Message: {stash['message']}")
-    return '\n'.join(output) if output else "No stashes"
-
-def format_hook_info(hook_name: str, hook_info: Dict[str, Any]) -> str:
-    """格式化hook信息为字符串
-
+def setup_logging(verbose: bool = False):
+    """Set up logging with the specified verbosity.
+    
     Args:
-        hook_name: hook名称
-        hook_info: hook信息字典
-
-    Returns:
-        格式化后的字符串
+        verbose: Whether to enable verbose logging.
     """
-    status = '✓' if hook_info['enabled'] else '✗'
-    size = f"{hook_info['size']} bytes" if hook_info['size'] > 0 else 'N/A'
-    modified = hook_info['last_modified'] or 'N/A'
-
-    return (
-        f"{status} {hook_name}:\n"
-        f"  Exists: {'Yes' if hook_info['exists'] else 'No'}\n"
-        f"  Enabled: {'Yes' if hook_info['enabled'] else 'No'}\n"
-        f"  Executable: {'Yes' if hook_info['executable'] else 'No'}\n"
-        f"  Size: {size}\n"
-        f"  Last Modified: {modified}\n"
-        f"  Is Sample: {'Yes' if hook_info['is_sample'] else 'No'}"
+    log_level = "DEBUG" if verbose else "INFO"
+    logging.basicConfig(
+        level=getattr(logging, log_level),
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     )
 
-def handle_hooks_command(args: argparse.Namespace, repo: RepoManager):
-    """处理hooks相关命令
 
-    Args:
-        args: 命令行参数
-        repo: RepoManager实例
+def check_prerequisites():
+    """Check if all prerequisites are met.
+    
+    Returns:
+        True if all prerequisites are met, False otherwise.
     """
-    if args.hooks_command == 'list':
-        hooks = repo.list_hooks()
-        for hook_name, hook_info in hooks.items():
-            print(format_hook_info(hook_name, hook_info))
-            print()
+    # Check if GitHub CLI is installed
+    if not is_github_cli_installed():
+        print("Error: GitHub CLI (gh) is not installed.")
+        print("Please install it from: https://cli.github.com/manual/installation")
+        return False
+    
+    # Check if GitHub CLI is authenticated
+    if not is_github_cli_authenticated():
+        print("Error: Not authenticated with GitHub CLI.")
+        print("Please run: gh auth login")
+        return False
+    
+    return True
 
-    elif args.hooks_command == 'install':
-        with open(args.file, 'r') as f:
-            content = f.read()
-        if repo.install_hook(args.name, content):
-            print(f"Successfully installed hook: {args.name}")
-        else:
-            print(f"Failed to install hook: {args.name}")
 
-    elif args.hooks_command == 'remove':
-        if repo.remove_hook(args.name):
-            print(f"Successfully removed hook: {args.name}")
-        else:
-            print(f"Failed to remove hook: {args.name}")
-
-    elif args.hooks_command == 'enable':
-        if repo.enable_hook(args.name):
-            print(f"Successfully enabled hook: {args.name}")
-        else:
-            print(f"Failed to enable hook: {args.name}")
-
-    elif args.hooks_command == 'disable':
-        if repo.disable_hook(args.name):
-            print(f"Successfully disabled hook: {args.name}")
-        else:
-            print(f"Failed to disable hook: {args.name}")
-
-def main():
-    """主函数"""
-    parser = create_parser()
-    args = parser.parse_args()
-
-    if not args.command:
-        parser.print_help()
-        return
-
+def optimize_command(args):
+    """Handle the optimize command.
+    
+    Args:
+        args: The command-line arguments.
+    """
+    # Check prerequisites
+    if not check_prerequisites():
+        sys.exit(1)
+    
+    # Check if the provider is available
+    if args.provider != "local" and not check_provider_api_key(args.provider):
+        print(f"Error: API key for provider '{args.provider}' is not set.")
+        print(f"Please set the appropriate environment variable.")
+        sys.exit(1)
+    
+    # Initialize the optimizer
+    optimizer = RepositoryOptimizer(
+        provider_name=args.provider,
+        apply_changes=args.apply,
+        sync_forks=not args.no_sync,
+        github_token=args.token
+    )
+    
+    # Optimize repositories
     try:
-        repo_path = os.getcwd()
-        with RepoManager(repo_path) as repo:
-            if args.command == 'branch':
-                success = repo.create_branch(args.name, args.base)
-                if not success:
-                    sys.exit(1)
-
-            elif args.command == 'commit':
-                success = repo.commit_changes(args.message, args.files)
-                if not success:
-                    sys.exit(1)
-
-            elif args.command == 'push':
-                success = repo.push_changes(args.branch, args.force)
-                if not success:
-                    sys.exit(1)
-
-            elif args.command == 'sync':
-                success = repo.sync_with_remote(args.branch)
-                if not success:
-                    sys.exit(1)
-
-            elif args.command == 'tag':
-                success = repo.create_tag(args.name, args.message)
-                if not success:
-                    sys.exit(1)
-
-            elif args.command == 'history':
-                commits = repo.get_commit_history(args.count)
-                print(format_commit_history(commits))
-
-            elif args.command == 'changes':
-                changes = repo.get_file_changes(args.commit)
-                print(format_changes(changes))
-
-            elif args.command == 'merge':
-                if args.abort:
-                    success = repo.abort_merge()
-                elif args.resolve:
-                    success = repo.resolve_conflicts(args.resolve)
-                else:
-                    success = repo.merge_branch(args.source, args.strategy, args.squash)
-                if not success:
-                    sys.exit(1)
-
-            elif args.command == 'cherry-pick':
-                success = repo.cherry_pick(args.commits)
-                if not success:
-                    sys.exit(1)
-
-            elif args.command == 'stash':
-                if args.stash_command == 'push':
-                    success = repo.stash_changes(args.name)
-                    if not success:
-                        sys.exit(1)
-                elif args.stash_command == 'pop':
-                    success = repo.pop_stash(args.index)
-                    if not success:
-                        sys.exit(1)
-                elif args.stash_command == 'list':
-                    stashes = repo.list_stashes()
-                    print(format_stashes(stashes))
-                else:
-                    parser.print_help()
-
-            elif args.command == 'hooks':
-                handle_hooks_command(args, repo)
-
+        results = optimizer.optimize_user_repositories(
+            username=args.username,
+            max_repos=args.max_repos
+        )
+        
+        # Print summary
+        print("\nOptimization Summary:")
+        print(f"Processed {len(results)} repositories")
+        
+        success_count = sum(1 for r in results if r.get("success", False))
+        print(f"Successfully optimized: {success_count}")
+        
+        error_count = sum(1 for r in results if not r.get("success", False))
+        print(f"Errors: {error_count}")
+        
+        changes_count = sum(1 for r in results if any(r.get("changes", {}).values()))
+        print(f"Repositories with changes: {changes_count}")
+        
+        if args.apply:
+            print("\nChanges have been applied to the repositories.")
+        else:
+            print("\nThis was a dry run. Use --apply to apply changes.")
+        
     except Exception as e:
-        logger.error(f"执行命令失败: {str(e)}")
+        logger.error(f"Error optimizing repositories: {e}")
         sys.exit(1)
 
-if __name__ == '__main__':
+
+def setup_hook_command(args):
+    """Handle the setup-hook command.
+    
+    Args:
+        args: The command-line arguments.
+    """
+    # Import the setup_commit_hook module
+    try:
+        from .setup_commit_hook import main as setup_hook_main
+    except ImportError:
+        print("Error: Could not import setup_commit_hook module.")
+        sys.exit(1)
+    
+    # Run the setup
+    try:
+        setup_hook_main()
+    except Exception as e:
+        logger.error(f"Error setting up commit hook: {e}")
+        sys.exit(1)
+
+
+def list_providers_command(args):
+    """Handle the list-providers command.
+    
+    Args:
+        args: The command-line arguments.
+    """
+    # Get available providers
+    providers = list_available_providers()
+    
+    print("Available LLM Providers:")
+    print("------------------------")
+    
+    for name, info in providers.items():
+        available = info.get("available", False)
+        status = "Available" if available else "Not available"
+        
+        if available:
+            api_key = check_provider_api_key(name)
+            if api_key:
+                status += " (API key set)"
+            else:
+                status += " (API key not set)"
+        else:
+            error = info.get("error", "")
+            status += f" ({error})"
+        
+        print(f"{name}: {status}")
+    
+    print("\nTo use a specific provider, set the appropriate API key and use:")
+    print("  python -m repo_seo optimize <username> --provider <provider_name>")
+
+
+def check_auth_command(args):
+    """Handle the check-auth command.
+    
+    Args:
+        args: The command-line arguments.
+    """
+    # Check if GitHub CLI is installed
+    if not is_github_cli_installed():
+        print("Error: GitHub CLI (gh) is not installed.")
+        print("Please install it from: https://cli.github.com/manual/installation")
+        sys.exit(1)
+    
+    # Check if GitHub CLI is authenticated
+    if is_github_cli_authenticated():
+        print("GitHub CLI is authenticated.")
+    else:
+        print("GitHub CLI is not authenticated.")
+        print("Please run: gh auth login")
+        sys.exit(1)
+
+
+def main():
+    """Main function for the command-line interface."""
+    parser = argparse.ArgumentParser(description="GitHub Repository SEO Optimizer")
+    parser.add_argument("--verbose", action="store_true", help="Enable verbose logging")
+    
+    subparsers = parser.add_subparsers(dest="command", help="Command to run")
+    
+    # Optimize command
+    optimize_parser = subparsers.add_parser("optimize", help="Optimize GitHub repositories")
+    optimize_parser.add_argument("username", help="GitHub username")
+    optimize_parser.add_argument("--apply", action="store_true", help="Apply changes (default is dry run)")
+    optimize_parser.add_argument("--provider", default="local", help="LLM provider to use (default: local)")
+    optimize_parser.add_argument("--no-sync", action="store_true", help="Don't sync forked repositories")
+    optimize_parser.add_argument("--max-repos", type=int, default=100, help="Maximum number of repositories to optimize")
+    optimize_parser.add_argument("--token", help="GitHub API token (default: use GitHub CLI)")
+    optimize_parser.set_defaults(func=optimize_command)
+    
+    # Setup hook command
+    setup_hook_parser = subparsers.add_parser("setup-hook", help="Set up commit message hook")
+    setup_hook_parser.set_defaults(func=setup_hook_command)
+    
+    # List providers command
+    list_providers_parser = subparsers.add_parser("list-providers", help="List available LLM providers")
+    list_providers_parser.set_defaults(func=list_providers_command)
+    
+    # Check auth command
+    check_auth_parser = subparsers.add_parser("check-auth", help="Check GitHub CLI authentication")
+    check_auth_parser.set_defaults(func=check_auth_command)
+    
+    args = parser.parse_args()
+    
+    # Set up logging
+    setup_logging(args.verbose)
+    
+    if args.command is None:
+        parser.print_help()
+        sys.exit(1)
+    
+    # Run the command
+    args.func(args)
+
+
+if __name__ == "__main__":
     main()

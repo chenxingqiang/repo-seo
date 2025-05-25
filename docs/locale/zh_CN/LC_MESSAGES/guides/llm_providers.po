@@ -1,0 +1,644 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Chen Xingqiang
+# This file is distributed under the same license as the GitHub Repository
+# SEO Optimizer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GitHub Repository SEO Optimizer 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-25 18:12+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../guides/llm_providers.rst:2
+msgid "LLM Providers Guide"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:4
+msgid ""
+"This guide provides detailed information about all supported Language "
+"Model (LLM) providers in the GitHub Repository SEO Optimizer."
+msgstr ""
+
+#: ../../guides/llm_providers.rst:7
+msgid "Overview"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:9
+msgid "The tool supports 8 different LLM providers, each with its own strengths:"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:11
+msgid "LLM Providers Comparison"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:15
+msgid "Provider"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:16
+msgid "API Key Required"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:17
+msgid "Cost"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:18
+msgid "Quality"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:19
+msgid "Speed"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:20
+msgid "Local"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:21 ../../guides/llm_providers.rst:41
+msgid "No"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:22 ../../guides/llm_providers.rst:42
+msgid "Free"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:23
+msgid "Basic"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:24 ../../guides/llm_providers.rst:29
+#: ../../guides/llm_providers.rst:34 ../../guides/llm_providers.rst:39
+#: ../../guides/llm_providers.rst:49 ../../guides/llm_providers.rst:54
+#: ../../guides/llm_providers.rst:59
+msgid "Fast"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:25
+msgid "OpenAI"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:26 ../../guides/llm_providers.rst:31
+#: ../../guides/llm_providers.rst:36 ../../guides/llm_providers.rst:46
+#: ../../guides/llm_providers.rst:51 ../../guides/llm_providers.rst:56
+msgid "Yes"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:27 ../../guides/llm_providers.rst:32
+#: ../../guides/llm_providers.rst:47 ../../guides/llm_providers.rst:52
+#: ../../guides/llm_providers.rst:57
+msgid "Paid"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:28 ../../guides/llm_providers.rst:33
+msgid "Excellent"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:30
+msgid "Anthropic"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:35
+msgid "Gemini"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:37
+msgid "Free tier available"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:38 ../../guides/llm_providers.rst:48
+msgid "Very Good"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:40
+msgid "Ollama"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:43 ../../guides/llm_providers.rst:53
+#: ../../guides/llm_providers.rst:58
+msgid "Good"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:44
+msgid "Depends on hardware"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:45
+msgid "DeepSeek"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:50
+msgid "ZhiPu"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:55
+msgid "QianWen"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:62
+msgid "Local Provider"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:64
+msgid ""
+"The local provider uses rule-based algorithms and doesn't require any API"
+" keys."
+msgstr ""
+
+#: ../../guides/llm_providers.rst:66
+msgid "**Advantages:**"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:68
+msgid "No API key required"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:69
+msgid "No cost"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:70
+msgid "Fast processing"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:71
+msgid "Privacy-focused (no data sent externally)"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:73
+msgid "**Limitations:**"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:75
+msgid "Basic quality compared to AI models"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:76
+msgid "Limited understanding of context"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:77
+msgid "Rule-based generation"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:79 ../../guides/llm_providers.rst:112
+#: ../../guides/llm_providers.rst:138 ../../guides/llm_providers.rst:163
+#: ../../guides/llm_providers.rst:198 ../../guides/llm_providers.rst:223
+#: ../../guides/llm_providers.rst:248 ../../guides/llm_providers.rst:274
+msgid "**Usage:**"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:86
+msgid "OpenAI Provider"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:88
+msgid "Uses OpenAI's GPT models for high-quality content generation."
+msgstr ""
+
+#: ../../guides/llm_providers.rst:90 ../../guides/llm_providers.rst:123
+#: ../../guides/llm_providers.rst:149 ../../guides/llm_providers.rst:174
+#: ../../guides/llm_providers.rst:209 ../../guides/llm_providers.rst:234
+#: ../../guides/llm_providers.rst:259
+msgid "**Setup:**"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:92
+msgid ""
+"Get an API key from `OpenAI Platform <https://platform.openai.com/api-"
+"keys>`_"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:93 ../../guides/llm_providers.rst:126
+#: ../../guides/llm_providers.rst:152 ../../guides/llm_providers.rst:212
+#: ../../guides/llm_providers.rst:237 ../../guides/llm_providers.rst:262
+msgid "Set the environment variable:"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:99
+msgid "**Configuration:**"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:106 ../../guides/llm_providers.rst:132
+#: ../../guides/llm_providers.rst:158 ../../guides/llm_providers.rst:218
+#: ../../guides/llm_providers.rst:243 ../../guides/llm_providers.rst:268
+msgid "**Models Available:**"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:108
+msgid "``gpt-4``: Most capable, higher cost"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:109
+msgid "``gpt-3.5-turbo``: Good balance of quality and cost"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:110
+msgid "``gpt-4-turbo``: Latest model with better performance"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:119
+msgid "Anthropic Provider"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:121
+msgid "Uses Anthropic's Claude models for sophisticated content generation."
+msgstr ""
+
+#: ../../guides/llm_providers.rst:125
+msgid "Get an API key from `Anthropic Console <https://console.anthropic.com/>`_"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:134
+msgid "``claude-3-opus-20240229``: Most capable"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:135
+msgid "``claude-3-sonnet-20240229``: Balanced performance"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:136
+msgid "``claude-3-haiku-20240307``: Fastest and most affordable"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:145
+msgid "Google Gemini Provider"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:147
+msgid "Uses Google's Gemini models for content generation."
+msgstr ""
+
+#: ../../guides/llm_providers.rst:151
+msgid ""
+"Get an API key from `Google AI Studio "
+"<https://makersuite.google.com/app/apikey>`_"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:160
+msgid "``gemini-pro``: General purpose model"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:161
+msgid "``gemini-pro-vision``: Multimodal capabilities"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:170
+msgid "Ollama Provider"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:172
+msgid "Uses locally running models through Ollama."
+msgstr ""
+
+#: ../../guides/llm_providers.rst:176
+msgid "Install Ollama from `ollama.ai <https://ollama.ai/>`_"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:177
+msgid "Pull a model:"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:185
+msgid "Start Ollama service:"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:191
+msgid "**Available Models:**"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:193
+msgid "``llama3``: Meta's latest model"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:194
+msgid "``mistral``: Fast and efficient"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:195
+msgid "``codellama``: Optimized for code"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:196
+msgid "``phi``: Microsoft's small model"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:205
+msgid "DeepSeek Provider"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:207
+msgid "Uses DeepSeek's models optimized for code and technical content."
+msgstr ""
+
+#: ../../guides/llm_providers.rst:211
+msgid "Get an API key from `DeepSeek Platform <https://platform.deepseek.com/>`_"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:220
+msgid "``deepseek-coder``: Optimized for code understanding"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:221
+msgid "``deepseek-chat``: General purpose"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:230
+msgid "ZhiPu Provider"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:232
+msgid "Uses ZhiPu AI's GLM models (Chinese company)."
+msgstr ""
+
+#: ../../guides/llm_providers.rst:236
+msgid "Get an API key from `ZhiPu AI <https://open.bigmodel.cn/>`_"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:245
+msgid "``glm-4``: Latest model"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:246
+msgid "``glm-3-turbo``: Faster variant"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:255
+msgid "QianWen Provider"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:257
+msgid "Uses Alibaba's QianWen (通义千问) models."
+msgstr ""
+
+#: ../../guides/llm_providers.rst:261
+msgid "Get an API key from `Alibaba Cloud <https://dashscope.aliyun.com/>`_"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:270
+msgid "``qwen-turbo``: Fast model"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:271
+msgid "``qwen-plus``: Enhanced capabilities"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:272
+msgid "``qwen-max``: Most capable"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:281
+msgid "Choosing the Right Provider"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:283
+msgid "Consider these factors when choosing a provider:"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:285
+msgid "**For Best Quality:**"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:286
+msgid "Choose OpenAI (GPT-4) or Anthropic (Claude-3-Opus)"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:288
+msgid "**For Cost Efficiency:**"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:289
+msgid "Use Local provider or Ollama with local models"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:291
+msgid "**For Privacy:**"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:292
+msgid "Use Local provider or Ollama (data stays on your machine)"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:294
+msgid "**For Speed:**"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:295
+msgid "Local provider is fastest, followed by API-based providers"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:297
+msgid "**For Chinese Content:**"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:298
+msgid "Consider ZhiPu or QianWen providers"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:300
+msgid "**For Code-Heavy Repositories:**"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:301
+msgid "DeepSeek or OpenAI perform well with code understanding"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:304
+msgid "Provider-Specific Tips"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:307
+msgid "OpenAI Tips"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:309
+msgid "Use ``gpt-3.5-turbo`` for cost-effective processing"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:310
+msgid "Set temperature to 0.7 for balanced creativity"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:311
+msgid "Monitor token usage to control costs"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:314
+msgid "Anthropic Tips"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:316
+msgid "Claude excels at following complex instructions"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:317
+msgid "Good for repositories requiring nuanced descriptions"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:318
+msgid "Consider using system prompts for consistency"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:321
+msgid "Ollama Tips"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:323
+msgid "Pre-download models for faster processing"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:324
+msgid "Use GPU acceleration if available"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:325
+msgid "Consider ``mistral`` for speed, ``llama3`` for quality"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:328
+msgid "Error Handling"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:330
+msgid "Common errors and solutions:"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:332
+msgid "**API Key Errors:**"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:338
+msgid "Solution: Check your environment variable is set correctly"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:340
+msgid "**Rate Limiting:**"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:346
+msgid "Solution: Add delays between requests or upgrade your plan"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:348
+msgid "**Model Not Found:**"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:354
+msgid "Solution: Check the model name is correct for your provider"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:356
+msgid "**Connection Errors:**"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:362
+msgid "Solution: For Ollama, ensure the service is running"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:365
+msgid "Advanced Configuration"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:368
+msgid "Custom Provider Settings"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:385
+msgid "Fallback Providers"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:396
+msgid "Batch Processing Optimization"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:398
+msgid "For batch processing, consider:"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:400
+msgid "Using cheaper models for bulk operations"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:401
+msgid "Implementing rate limiting"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:402
+msgid "Caching results to avoid duplicate API calls"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:403
+msgid "Using local provider for initial filtering"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:406
+msgid "Performance Benchmarks"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:408
+msgid "Approximate processing times for 100 repositories:"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:410
+msgid "**Local**: 2-3 minutes"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:411
+msgid "**OpenAI GPT-3.5**: 5-10 minutes"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:412
+msgid "**OpenAI GPT-4**: 10-15 minutes"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:413
+msgid "**Anthropic Claude**: 8-12 minutes"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:414
+msgid "**Ollama (local)**: 15-30 minutes (depends on hardware)"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:417
+msgid "Cost Estimates"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:419
+msgid "For 100 repositories (approximate):"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:421
+msgid "**Local**: Free"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:422
+msgid "**OpenAI GPT-3.5**: $0.50 - $1.00"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:423
+msgid "**OpenAI GPT-4**: $5.00 - $10.00"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:424
+msgid "**Anthropic Claude**: $3.00 - $8.00"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:425
+msgid "**Gemini**: Free tier usually sufficient"
+msgstr ""
+
+#: ../../guides/llm_providers.rst:426
+msgid "**Ollama**: Free (local compute)"
+msgstr ""
+

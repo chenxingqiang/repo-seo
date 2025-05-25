@@ -1,0 +1,561 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Chen Xingqiang
+# This file is distributed under the same license as the GitHub Repository
+# SEO Optimizer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GitHub Repository SEO Optimizer 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-25 18:47+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../faq.rst:2
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: ../../faq.rst:4
+msgid ""
+"This page answers common questions about the GitHub Repository SEO "
+"Optimizer."
+msgstr ""
+
+#: ../../faq.rst:7
+msgid "General Questions"
+msgstr ""
+
+#: ../../faq.rst:10
+msgid "What is GitHub Repository SEO Optimizer?"
+msgstr ""
+
+#: ../../faq.rst:12
+msgid ""
+"GitHub Repository SEO Optimizer is a tool that automatically improves the"
+" discoverability of GitHub repositories by optimizing their descriptions,"
+" topics, and documentation using AI-powered analysis."
+msgstr ""
+
+#: ../../faq.rst:15
+msgid "Why do I need to optimize my GitHub repositories?"
+msgstr ""
+
+#: ../../faq.rst:17
+msgid "Optimizing your repositories helps:"
+msgstr ""
+
+#: ../../faq.rst:19
+msgid "Increase visibility in GitHub search results"
+msgstr ""
+
+#: ../../faq.rst:20
+msgid "Attract more contributors and users"
+msgstr ""
+
+#: ../../faq.rst:21
+msgid "Better communicate your project's purpose"
+msgstr ""
+
+#: ../../faq.rst:22
+msgid "Improve professional presentation"
+msgstr ""
+
+#: ../../faq.rst:25
+msgid "Is it safe to use?"
+msgstr ""
+
+#: ../../faq.rst:27
+msgid "Yes, the tool is safe to use:"
+msgstr ""
+
+#: ../../faq.rst:29
+msgid "It only modifies repository metadata (description and topics)"
+msgstr ""
+
+#: ../../faq.rst:30
+msgid "All changes can be previewed with ``--dry-run``"
+msgstr ""
+
+#: ../../faq.rst:31
+msgid "It doesn't modify your code or commit history"
+msgstr ""
+
+#: ../../faq.rst:32
+msgid "You maintain full control over what changes are applied"
+msgstr ""
+
+#: ../../faq.rst:35
+msgid "Installation & Setup"
+msgstr ""
+
+#: ../../faq.rst:38
+msgid "Do I need API keys?"
+msgstr ""
+
+#: ../../faq.rst:40
+msgid "**No** for basic usage with the local provider"
+msgstr ""
+
+#: ../../faq.rst:41
+msgid "**Yes** for advanced AI providers (OpenAI, Anthropic, etc.)"
+msgstr ""
+
+#: ../../faq.rst:42
+msgid "GitHub CLI authentication is always required"
+msgstr ""
+
+#: ../../faq.rst:45
+msgid "Which Python version is required?"
+msgstr ""
+
+#: ../../faq.rst:47
+msgid "Python 3.8 or higher is required. Check your version:"
+msgstr ""
+
+#: ../../faq.rst:54
+msgid "How do I authenticate with GitHub?"
+msgstr ""
+
+#: ../../faq.rst:56
+msgid "Use GitHub CLI:"
+msgstr ""
+
+#: ../../faq.rst:62
+msgid "Follow the prompts to authenticate via browser or token."
+msgstr ""
+
+#: ../../faq.rst:65
+msgid "Usage Questions"
+msgstr ""
+
+#: ../../faq.rst:68
+msgid "How do I preview changes without applying them?"
+msgstr ""
+
+#: ../../faq.rst:70
+msgid "Use the ``--dry-run`` flag:"
+msgstr ""
+
+#: ../../faq.rst:77
+msgid "Can I optimize private repositories?"
+msgstr ""
+
+#: ../../faq.rst:79
+msgid "Yes, but they're skipped by default. To include them:"
+msgstr ""
+
+#: ../../faq.rst:86
+msgid "How do I optimize only specific repositories?"
+msgstr ""
+
+#: ../../faq.rst:88
+msgid "Use the ``--repo`` flag:"
+msgstr ""
+
+#: ../../faq.rst:95
+msgid "What's the difference between LLM providers?"
+msgstr ""
+
+#: ../../faq.rst:97
+msgid "Provider Comparison"
+msgstr ""
+
+#: ../../faq.rst:100
+msgid "Provider"
+msgstr ""
+
+#: ../../faq.rst:101
+msgid "Quality"
+msgstr ""
+
+#: ../../faq.rst:102
+msgid "Cost"
+msgstr ""
+
+#: ../../faq.rst:103
+msgid "Privacy"
+msgstr ""
+
+#: ../../faq.rst:104
+msgid "Local"
+msgstr ""
+
+#: ../../faq.rst:105
+msgid "Basic"
+msgstr ""
+
+#: ../../faq.rst:106 ../../faq.rst:118
+msgid "Free"
+msgstr ""
+
+#: ../../faq.rst:107
+msgid "High (no data sent)"
+msgstr ""
+
+#: ../../faq.rst:108
+msgid "OpenAI"
+msgstr ""
+
+#: ../../faq.rst:109 ../../faq.rst:113
+msgid "Excellent"
+msgstr ""
+
+#: ../../faq.rst:110 ../../faq.rst:114
+msgid "Paid"
+msgstr ""
+
+#: ../../faq.rst:111
+msgid "Data sent to OpenAI"
+msgstr ""
+
+#: ../../faq.rst:112
+msgid "Anthropic"
+msgstr ""
+
+#: ../../faq.rst:115
+msgid "Data sent to Anthropic"
+msgstr ""
+
+#: ../../faq.rst:116
+msgid "Ollama"
+msgstr ""
+
+#: ../../faq.rst:117
+msgid "Good"
+msgstr ""
+
+#: ../../faq.rst:119
+msgid "High (runs locally)"
+msgstr ""
+
+#: ../../faq.rst:122
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../faq.rst:125
+msgid "\"GitHub CLI not found\" error"
+msgstr ""
+
+#: ../../faq.rst:127
+msgid "Install GitHub CLI:"
+msgstr ""
+
+#: ../../faq.rst:129
+msgid "**macOS**: ``brew install gh``"
+msgstr ""
+
+#: ../../faq.rst:130
+msgid "**Windows**: ``winget install --id GitHub.cli``"
+msgstr ""
+
+#: ../../faq.rst:131
+msgid ""
+"**Linux**: See `GitHub CLI installation "
+"<https://github.com/cli/cli/blob/trunk/docs/install_linux.md>`_"
+msgstr ""
+
+#: ../../faq.rst:134
+msgid "\"Rate limit exceeded\" error"
+msgstr ""
+
+#: ../../faq.rst:136
+msgid "GitHub has API rate limits. Solutions:"
+msgstr ""
+
+#: ../../faq.rst:138
+msgid "Wait for the limit to reset (usually 1 hour)"
+msgstr ""
+
+#: ../../faq.rst:139
+msgid "Process fewer repositories at once"
+msgstr ""
+
+#: ../../faq.rst:140
+msgid "Add delays between operations:"
+msgstr ""
+
+#: ../../faq.rst:147
+msgid "\"Invalid API key\" error"
+msgstr ""
+
+#: ../../faq.rst:149
+msgid "Check your API key:"
+msgstr ""
+
+#: ../../faq.rst:151
+msgid "Verify the environment variable is set correctly"
+msgstr ""
+
+#: ../../faq.rst:152
+msgid "Ensure the API key is valid and active"
+msgstr ""
+
+#: ../../faq.rst:153
+msgid "Check you're using the correct provider name"
+msgstr ""
+
+#: ../../faq.rst:156
+msgid "No changes detected"
+msgstr ""
+
+#: ../../faq.rst:158
+msgid "This can happen when:"
+msgstr ""
+
+#: ../../faq.rst:160
+msgid "Repositories are already well-optimized"
+msgstr ""
+
+#: ../../faq.rst:161
+msgid "The provider couldn't generate better content"
+msgstr ""
+
+#: ../../faq.rst:162
+msgid "Try a different provider for better results"
+msgstr ""
+
+#: ../../faq.rst:165
+msgid "Best Practices"
+msgstr ""
+
+#: ../../faq.rst:168
+msgid "How often should I run the optimizer?"
+msgstr ""
+
+#: ../../faq.rst:170
+msgid "**New repositories**: Immediately after creation"
+msgstr ""
+
+#: ../../faq.rst:171
+msgid "**Active projects**: Monthly or after major updates"
+msgstr ""
+
+#: ../../faq.rst:172
+msgid "**Stable projects**: Quarterly"
+msgstr ""
+
+#: ../../faq.rst:175
+msgid "Should I use different providers for different repos?"
+msgstr ""
+
+#: ../../faq.rst:177
+msgid "Yes, consider:"
+msgstr ""
+
+#: ../../faq.rst:179
+msgid "**Local provider**: Quick optimization for many repos"
+msgstr ""
+
+#: ../../faq.rst:180
+msgid "**AI providers**: Important or complex projects"
+msgstr ""
+
+#: ../../faq.rst:181
+msgid "**Ollama**: Privacy-sensitive projects"
+msgstr ""
+
+#: ../../faq.rst:184
+msgid "How many topics should a repository have?"
+msgstr ""
+
+#: ../../faq.rst:186
+msgid "**Minimum**: 3-5 topics for basic discoverability"
+msgstr ""
+
+#: ../../faq.rst:187
+msgid "**Optimal**: 5-10 relevant topics"
+msgstr ""
+
+#: ../../faq.rst:188
+msgid "**Maximum**: GitHub allows up to 20 topics"
+msgstr ""
+
+#: ../../faq.rst:191
+msgid "Advanced Usage"
+msgstr ""
+
+#: ../../faq.rst:194
+msgid "Can I automate the optimization process?"
+msgstr ""
+
+#: ../../faq.rst:196
+msgid "Yes, see :doc:`guides/batch_processing` for automation options including:"
+msgstr ""
+
+#: ../../faq.rst:198
+msgid "Cron jobs"
+msgstr ""
+
+#: ../../faq.rst:199
+msgid "GitHub Actions"
+msgstr ""
+
+#: ../../faq.rst:200
+msgid "CI/CD integration"
+msgstr ""
+
+#: ../../faq.rst:203
+msgid "Can I customize the optimization rules?"
+msgstr ""
+
+#: ../../faq.rst:205
+msgid "Yes, through:"
+msgstr ""
+
+#: ../../faq.rst:207
+msgid "Configuration files"
+msgstr ""
+
+#: ../../faq.rst:208
+msgid "Custom providers"
+msgstr ""
+
+#: ../../faq.rst:209
+msgid "API usage"
+msgstr ""
+
+#: ../../faq.rst:211
+msgid "See :doc:`configuration` for details."
+msgstr ""
+
+#: ../../faq.rst:214
+msgid "Can I use this for an organization?"
+msgstr ""
+
+#: ../../faq.rst:216
+msgid "Yes:"
+msgstr ""
+
+#: ../../faq.rst:223
+msgid "How do I contribute to the project?"
+msgstr ""
+
+#: ../../faq.rst:225
+msgid "Fork the repository"
+msgstr ""
+
+#: ../../faq.rst:226
+msgid "Create a feature branch"
+msgstr ""
+
+#: ../../faq.rst:227
+msgid "Make your changes"
+msgstr ""
+
+#: ../../faq.rst:228
+msgid "Submit a pull request"
+msgstr ""
+
+#: ../../faq.rst:230
+msgid ""
+"See the `Contributing Guide <https://github.com/chenxingqiang/repo-"
+"seo/blob/main/CONTRIBUTING.md>`_ for details."
+msgstr ""
+
+#: ../../faq.rst:233
+msgid "API & Integration"
+msgstr ""
+
+#: ../../faq.rst:236
+msgid "Can I use this programmatically?"
+msgstr ""
+
+#: ../../faq.rst:238
+msgid "Yes, see :doc:`api/modules` for API documentation."
+msgstr ""
+
+#: ../../faq.rst:241
+msgid "Can I integrate with CI/CD?"
+msgstr ""
+
+#: ../../faq.rst:243
+msgid "Yes, example GitHub Actions workflow:"
+msgstr ""
+
+#: ../../faq.rst:254
+msgid "Does it work with GitLab or Bitbucket?"
+msgstr ""
+
+#: ../../faq.rst:256
+msgid ""
+"Currently, only GitHub is supported. Other platforms may be added in "
+"future versions."
+msgstr ""
+
+#: ../../faq.rst:259
+msgid "Getting Help"
+msgstr ""
+
+#: ../../faq.rst:262
+msgid "Where can I get more help?"
+msgstr ""
+
+#: ../../faq.rst:264
+msgid "Check the :doc:`troubleshooting` guide"
+msgstr ""
+
+#: ../../faq.rst:265
+msgid "Search `GitHub Issues <https://github.com/chenxingqiang/repo-seo/issues>`_"
+msgstr ""
+
+#: ../../faq.rst:266
+msgid "Create a new issue with details"
+msgstr ""
+
+#: ../../faq.rst:267
+msgid "Join our `Discord community <https://discord.gg/repo-seo>`_ (if available)"
+msgstr ""
+
+#: ../../faq.rst:270
+msgid "How do I report bugs?"
+msgstr ""
+
+#: ../../faq.rst:272
+msgid "Create an issue on GitHub with:"
+msgstr ""
+
+#: ../../faq.rst:274
+msgid "Your Python version"
+msgstr ""
+
+#: ../../faq.rst:275
+msgid "Operating system"
+msgstr ""
+
+#: ../../faq.rst:276
+msgid "Complete error message"
+msgstr ""
+
+#: ../../faq.rst:277
+msgid "Steps to reproduce"
+msgstr ""
+
+#: ../../faq.rst:280
+msgid "How do I request features?"
+msgstr ""
+
+#: ../../faq.rst:282
+msgid "Open a feature request issue describing:"
+msgstr ""
+
+#: ../../faq.rst:284
+msgid "The problem you're trying to solve"
+msgstr ""
+
+#: ../../faq.rst:285
+msgid "Your proposed solution"
+msgstr ""
+
+#: ../../faq.rst:286
+msgid "Any alternatives you've considered"
+msgstr ""
+

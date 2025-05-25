@@ -1,0 +1,390 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Chen Xingqiang
+# This file is distributed under the same license as the GitHub Repository
+# SEO Optimizer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GitHub Repository SEO Optimizer 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-25 18:23+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../guides/basic_usage.rst:2
+msgid "Basic Usage Guide"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:4
+msgid ""
+"This guide covers the fundamental usage patterns of the GitHub Repository"
+" SEO Optimizer."
+msgstr ""
+
+#: ../../guides/basic_usage.rst:7
+msgid "Getting Started"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:9
+msgid ""
+"The GitHub Repository SEO Optimizer is designed to be simple to use while"
+" providing powerful features for optimizing your GitHub repositories."
+msgstr ""
+
+#: ../../guides/basic_usage.rst:12
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:14
+msgid "Before using the tool, ensure you have:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:16
+msgid "Python 3.8 or higher installed"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:17
+msgid "GitHub CLI authenticated (``gh auth login``)"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:18
+msgid "Required dependencies installed (``pip install -r requirements.txt``)"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:21
+msgid "Basic Workflow"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:23
+msgid "The typical workflow for using the tool consists of:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:25
+msgid "**Analyze**: Examine repositories to identify optimization opportunities"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:26
+msgid "**Generate**: Create optimized descriptions and topics"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:27
+msgid "**Review**: Preview the proposed changes"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:28
+msgid "**Apply**: Update the repositories with optimizations"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:31
+msgid "Step 1: Analyze Your Repositories"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:33
+msgid "Start by analyzing your repositories:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:43
+msgid ""
+"The ``--dry-run`` flag lets you see what changes would be made without "
+"applying them."
+msgstr ""
+
+#: ../../guides/basic_usage.rst:46
+msgid "Step 2: Choose Your Provider"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:48
+msgid "Select an appropriate LLM provider based on your needs:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:62
+msgid "Step 3: Apply Optimizations"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:64
+msgid "Once you're satisfied with the proposed changes:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:75
+msgid "Common Scenarios"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:78
+msgid "Optimizing New Repositories"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:80
+msgid "When you create a new repository, optimize it immediately:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:91
+msgid "Batch Processing Multiple Repositories"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:93
+msgid "Process multiple repositories efficiently:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:104
+msgid "Updating Existing Repositories"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:106
+msgid "Re-optimize repositories after major updates:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:117
+msgid "Working with Different Languages"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:119
+msgid ""
+"The tool automatically detects repository languages and optimizes "
+"accordingly:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:122
+msgid "Python Projects"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:124
+msgid "For Python projects, the tool will:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:126
+msgid "Identify Python-specific frameworks (Django, Flask, FastAPI)"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:127
+msgid "Suggest relevant Python ecosystem topics"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:128
+msgid "Generate descriptions highlighting Python features"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:135
+msgid "JavaScript/TypeScript Projects"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:137
+msgid "For JavaScript/TypeScript projects:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:139
+msgid "Detect frontend frameworks (React, Vue, Angular)"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:140
+msgid "Identify Node.js usage"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:141
+msgid "Suggest web development topics"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:148
+msgid "Multi-Language Projects"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:150
+msgid "For projects with multiple languages:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:152
+msgid "Analyze the primary language"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:153
+msgid "Consider all languages in topic generation"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:154
+msgid "Create comprehensive descriptions"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:157
+msgid "Output and Results"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:160
+msgid "Understanding Output Files"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:162
+msgid "The tool generates JSON output files with optimization results:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:181
+msgid "Interpreting Results"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:183
+msgid "**Description Changes**: Compare before/after to see improvements"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:184
+msgid "**Topic Suggestions**: New topics for better discoverability"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:185
+msgid "**Optimization Score**: Overall SEO improvement (0-100)"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:188
+msgid "Best Practices"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:191
+msgid "1. Regular Optimization"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:193
+msgid "Optimize new repositories immediately after creation"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:194
+msgid "Re-optimize after major updates or refactoring"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:195
+msgid "Review optimizations quarterly"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:198
+msgid "2. Provider Selection"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:200
+msgid "Use **local** provider for quick, basic optimizations"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:201
+msgid "Use **OpenAI/Anthropic** for important or complex repositories"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:202
+msgid "Use **Ollama** for privacy-sensitive projects"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:205
+msgid "3. Topic Management"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:207
+msgid "Keep topics relevant and specific"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:208
+msgid "Limit to 5-10 most important topics"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:209
+msgid "Update topics as project evolves"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:212
+msgid "4. Description Writing"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:214
+msgid "Keep descriptions concise (under 150 characters)"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:215
+msgid "Include key technologies and purpose"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:216
+msgid "Make it searchable and clear"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:219
+msgid "Troubleshooting Common Issues"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:222
+msgid "No Changes Detected"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:224
+msgid "If the tool reports no changes needed:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:235
+msgid "API Rate Limits"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:237
+msgid "If you hit GitHub API rate limits:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:251
+msgid "Provider Errors"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:253
+msgid "If LLM providers fail:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:264
+msgid "Advanced Usage"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:267
+msgid "Custom Output Formats"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:269
+msgid "Save results in different formats:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:280
+msgid "Filtering Repositories"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:282
+msgid "Target specific types of repositories:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:293
+msgid "Integration with CI/CD"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:295
+msgid "Integrate SEO optimization into your workflow:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:316
+msgid "Next Steps"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:318
+msgid "After mastering basic usage:"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:320
+msgid "Explore :doc:`llm_providers` for provider-specific features"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:321
+msgid "Learn about :doc:`batch_processing` for large-scale operations"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:322
+msgid "Set up :doc:`commit_fixer` for better commit messages"
+msgstr ""
+
+#: ../../guides/basic_usage.rst:323
+msgid "Read the :doc:`/api/modules` for programmatic usage"
+msgstr ""
+
